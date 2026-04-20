@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kuwait Visa</title>
+
+<style>
+:root{
+    --primary:#1f6f8b;        /* main blue */
+    --primary-dark:#155e75;
+    --accent:#2aa7c9;         /* light blue */
+    --text-dark:#1e3a4c;
+    --text-light:#5f7d8a;
+    --bg:#f3f7fa;
+    --card:#ffffff;
+    --border:#d9e6ee;
+}
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background:var(--bg);
+    color:var(--text-dark);
+}
+
+/* HEADER */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 20px;   /* ADD THIS */
+    background:#ffffff;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px 16px;
+    border-radius: 0 0 20px 20px;
+
+    background: linear-gradient(
+        to right,
+        #e6f3f7,
+        #ffffff
+    );
+
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+
+}
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+/* LEFT */
+.left{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo-img{
+    width:40px;
+      height: 40px;
+}
+.logo-text h2 {
+    font-size: 18px;
+    color: #0b5c74;
+    margin: 0;
+    font-weight: 700;
+}
+#preview{
+    width:100%;
+    min-height:250px;
+    border-radius:10px;
+    overflow:hidden;
+}
+.logo-text span {
+    font-size: 14px;
+    color: #3fa7c4;
+}
+.logo-text span{
+    display:block;
+    font-weight:600;
+    color:#1f6f8b;
+    font-size:18px;
+}
+
+.logo-text small{
+    color:#5f7d8a;
+    font-size:13px;
+}
+
+/* RIGHT */
+.right{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+/* circle icons */
+.icon-circle{
+    width:36px;
+    height:36px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border:1px solid #cfe3ec;
+    color:#1f6f8b;
+    font-size:16px;
+
+    background:white;
+}
+
+/* menu */
+.menu{
+    font-size:24px;
+    color:#1f6f8b;
+    margin-left:5px;
+}
+    .apply-btn{
+    padding:14px 28px;
+    border:none;
+    border-radius:30px;
+    font-size:16px;
+    font-weight:600;
+    color:white;
+    background:linear-gradient(to right,#8aaea0,#5f6c72);
+    backdrop-filter:blur(5px);
+}
+.logo{
+    font-size:20px;
+    font-weight:600;
+    color:#0b5f84;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icons{
+    font-size:22px;
+    color:#0b5f84;
+}
+.icon-btn {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: white;
+    color: #0b5c74;
+
+    font-size: 16px;
+
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* HERO */
+.hero{
+    margin:15px;
+    border-radius:25px;
+    overflow:hidden;
+    position:relative;
+height:75vh;   /* ስክሪን 75% */
+    min-height:420px;
+}
+
+.hero img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    filter:brightness(0.7);
+}
+.overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.2),
+        rgba(0,0,0,0.65)
+    );
+}
+.hero-content{
+    position:absolute;
+    top:50%;
+     right:20px;
+    left:20px;
+    transform:translateY(-50%);
+    color:white;
+}
+
+.hero h1{
+    font-size:24px;
+    margin-bottom:20px;
+        font-weight:600;
+}
+    
+
+.hero ul{
+    list-style:none;
+    line-height:1.8;
+    margin-bottom:15px;
+}
+
+.hero button{
+    background:rgba(255,255,255,0.3);
+    border:none;
+    padding:12px 25px;
+    border-radius:30px;
+    color:white;
+    font-weight:bold;
+    backdrop-filter:blur(5px);
+}
+
+/* STATS */
+.stats{
+    padding:15px;
+}
+
+.stat-card{
+    background:linear-gradient(#eaf4f9,#ffffff);
+    border-radius:20px;
+    text-align:center;
+    padding:20px;
+    margin-bottom:15px;
+}
+
+.stat-icon{
+    width:60px;
+    height:60px;
+    background:#0b5f84;
+    border-radius:50%;
+    margin:0 auto 10px;
+}
+
+.stat-card h3{
+    color:#0b5f84;
+}
+
+.stat-card b{
+    font-size:35px;
+    color:#0b5f84;
+}
+/* steps */
+.steps{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    margin-bottom:30px;
+}
+
+.step{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+/* icon circle */
+.step span{
+    width:40px;
+    height:40px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:rgba(255,255,255,0.25);
+    backdrop-filter:blur(5px);
+    font-size:20px;
+}
+
+/* text */
+.step p{
+    font-size:15px;
+    font-weight:500;
+}
+/* SECTION */
+.section{
+    padding:15px;
+    
+}
+.section-box{
+    margin:15px;
+    padding:20px;
+    border-radius:20px;
+    background:linear-gradient(180deg,#eaf4f9,#ffffff);
+    border:1px solid #d6e6ef;
+}
+
+.section-box h2{
+    color:#0b5f84;
+    margin-bottom:10px;
+}
+
+.section-box p{
+    color:#4a6b7c;
+    line-height:1.6;
+}
+/* IMAGE CARD */
+.image-card{
+    margin:15px;
+    border-radius:20px;
+    overflow:hidden;
+    background:white;
+    box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+.image-card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+/* VISA DETAILS CARD */
+.details{
+    padding:15px;
+}
+
+.details h3{
+    color:#0b5f84;
+    margin-bottom:10px;
+}
+
+.details ul{
+    list-style:none;
+}
+
+.details li{
+    margin:8px 0;
+    color:#4a6b7c;
+}
+
+.details li::before{
+    content:"✔ ";
+    color:#1fa2d6;
+    font-weight:bold;
+}
+.card{
+    background:var(--card);
+    border-radius:20px;
+    padding:18px;
+    margin-bottom:15px;
+    border:1px solid var(--border);
+    box-shadow:0 4px 12px rgba(0,0,0,0.04);
+}
+
+.card h3{
+    color:var(--primary);
+    font-weight:600;
+    font-size:18px;
+    margin-bottom:10px;
+
+}
+
+.card ul{
+    list-style:none;
+}
+
+.card li{
+    color:var(--text-dark);
+    line-height:1.7;
+    font-size:14px;
+}
+.card li::before{
+    content:"✔";
+    color:var(--accent);
+    font-weight:bold;
+    margin-right:8px;
+}
+
+.menu-btn {
+    font-size:22px;
+    color: #0b5c74;
+    padding: 5px 8px;
+}
+/* SELECT */
+select{
+    width:100%;
+    padding:15px;
+    border-radius:15px;
+    border:none;
+    margin-top:10px;
+}
+
+.tabs{
+    display:flex;
+    gap:10px;
+    padding:0 15px;
+    margin-bottom:15px;
+}
+.title{
+    margin:20px 15px 10px;
+    font-size:20px;
+    color:#0b5f84;
+    font-weight:600; 
+}
+.tab{
+    flex:1;
+    padding:12px;
+    border-radius:25px;
+    text-align:center;
+    border:1px solid #0b5f84;
+    color:#0b5f84;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.active{
+    background:#0b5f84;
+    color:white;
+}
+.tab.active{
+    background:linear-gradient(to right,#0b5f84,#1fa2d6);
+    color:white;
+    border:none;
+}
+.download{
+    background:linear-gradient(180deg,#eaf4f9,#dcecf6);
+    margin:15px;
+    padding:25px;
+    border-radius:20px;
+    text-align:center;
+}
+
+.download h2{
+    color:var(--primary);
+    font-weight:600;
+}
+
+.download p{
+    color:var(--text-light);
+}
+.footer{
+    background:#f6f9fc;
+    padding:30px 20px;
+    border-radius:25px 25px 0 0;
+    margin-top:20px;
+}
+/* HEADER */
+.footer-header{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:20px;
+}
+footer h2{
+    color:var(--primary);
+}
+footer h4{
+    color:var(--primary);
+    margin-bottom:10px;
+}
+.footer-header img{
+    width:45px;
+}
+
+.footer-header h2{
+    margin:0;
+    color:#0b5f84;
+    font-size:20px;
+}
+
+.footer-header span{
+    color:#1fa2d6;
+    font-weight:600;
+}
+
+.footer-header p{
+    font-size:12px;
+    color:#7fa6bb;
+}
+
+/* GRID */
+.footer-grid{
+    display:flex;
+    justify-content:space-between;
+    margin-top:10px;
+      gap:20px;
+}
+
+.footer-grid h3{
+    color:#1fa2d6;
+    margin-bottom:10px;
+}
+
+.footer-grid p{
+    margin:6px 0;
+    color:#3c5f73;
+    font-size:14px;
+}
+footer p{
+    color:var(--text-light);
+    font-size:14px;
+}
+.footer-grid div{
+    flex:1;
+}
+.social span{
+    font-size:22px;
+    margin-right:15px;
+    color:var(--primary);
+}
+/* SOCIAL */
+.social{
+    display:flex;
+    justify-content:center;
+    font-size:22px;
+    margin:20px 0;
+    color:#0b5f84;
+    gap:20px
+}
+
+/* LINE */
+.divider{
+    height:1px;
+    background:#cfe3ef;
+    margin:10px 0;
+}
+
+/* BOTTOM TEXT */
+.bottom{
+    text-align:center;
+    font-size:12px;
+    color:#7fa6bb;
+}
+.scanner-box{
+    background:white;
+    padding:20px;
+    border-radius:20px;
+    text-align:center;
+    margin-top:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+video {
+    width: 100%;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: #0b5c74;
+    color: white;
+}
+.center{
+    text-align:center;
+    margin-top:10px;
+}
+
+</style>
+
+</head>
+<body>
+
+ 
+<header class="header">
+
+    <div class="left">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/State_of_Kuwait_Logo.svg" class="logo-img">
+        <div class="logo-text">
+            <span>Kuwait</span>
+            <small>Visa</small>
+        </div>
+    </div>
+
+    <div class="right">
+        <div class="icon-circle">🌐</div>
+        <div class="icon-circle">ع</div>
+        <div class="icon-circle">☾</div>
+        <div class="menu">≡</div>
+    </div>
+</header>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- HERO -->
+<div class="hero">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Kuwait_City.jpg">
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+        <h1>Apply for your visa in a few simple steps..</h1>
+
+        <div class="steps">
+            <div class="step">
+                <span>👤</span>
+                <p>Create your account</p>
+            </div>
+
+            <div class="step">
+                <span>📄</span>
+                <p>Complete your profile</p>
+            </div>
+
+            <div class="step">
+                <span>✔</span>
+                <p>Submit your visa application</p>
+            </div>
+
+            <div class="step">
+                <span>🔔</span>
+                <p>Track real-time updates</p>
+            </div>
+        </div>
+
+        <button class="apply-btn">Apply Now »</button>
+    </div>
+</div>
+
+<!-- STATS -->
+<div class="stats">
+
+    <div class="stat-card">
+        <div class="stat-icon"></div>
+        <h3>Tourist Visa</h3>
+        <b>95</b>
+        <p>Thousand</p>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-icon"></div>
+        <h3>Family Visa</h3>
+        <b>74</b>
+        <p>Thousand</p>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-icon"></div>
+        <h3>Business Visa</h3>
+        <b>25</b>
+        <p>Thousand</p>
+    </div>
+
+</div>
+
+<!-- SECTION -->
+   
+<div class="section">
+
+<div class="section-box">
+    <h2>Tourist Visa</h2>
+    <p>
+        This visa is issued to individuals who wish to visit the State of Kuwait 
+        for the purpose of tourism and entertainment. The tourist visa allows its 
+        holder to visit tourist attractions and explore the country.
+    </p>
+
+    <select>
+        <option>Select Nationality</option>
+    </select>
+</div>
+
+<div class="tabs">
+    <div class="tab active">Single Visit</div>
+    <div class="tab">Multiple Visit</div>
+</div>
+
+<div class="card">
+    <h3>Tourism Visa</h3>
+    <ul>
+        <li>Passport validity: No less than 6 months</li>
+        <li>Entry permit validity: 30 days from the date of
+            issuance</li>
+        <li>Stay duration: No more than 90 days from the 
+            date of entry</li>
+        <li>Number of entries: Single entry</li>
+            <li>Prohibition: The visa holder is prohibited from
+                working and must leave the country upon the expiration
+                of the visit period</li>   
+    </ul>
+        
+</div>
+
+<div class="card">
+    <h3>Family Visit Visa</h3>
+    <ul>
+        <li>Passport validity: No less than 6 months</li>
+        <li>Entry permit validity: 30 days from the date of
+            issuance</li>
+        <li>Stay duration: No more than 90 days from the
+            date of entry</li>
+        <li>Number of entries: Single entry</li>
+            <li>Prohibition: The visa holder is prohibited from working
+                and must leave the country upon the
+                expiration of the visit period</li>    
+    </ul>
+</div>
+
+<div class="card">
+    <h3>Government Visa </h3>
+    <ul>
+        <li>Passport validity: No less than 6 months</li>
+        <li>Entry permit validity: 30 days from the date of 
+            issuance</li>
+        <li>Stay duration: No more than 90 days from the
+            date of entry</li>
+        <li>Number of entries: Single entry</li>
+        <li>Prohibition: The visa holder is prohibited from working
+            and must leave the country upon the expiration
+            of the visit period</li>
+        
+    </ul>
+    </div>
+    
+    <div class="card">
+    <h3>Business Visa </h3>
+    <ul>
+        <li>Passport validity: No less than 6 months</li>
+        <li>Entry permit validity: 30 days from the date of 
+            issuance</li>
+        <li>Stay duration: No more than 90 days from the
+            date of entry</li>
+        <li>Number of entries: Single entry</li>
+        <li>Prohibition: The visa holder is prohibited from working
+            and must leave the country upon the expiration
+            of the visit period</li>
+        
+    </ul>
+</div>
+
+</div>
+
+<!-- DOWNLOAD -->
+<div class="download">
+    <h2>Download Kuwait Visa App</h2>
+    <p>Available on iPhone and Android</p>
+    </div>
+     
+<footer class="footer">
+
+    <div class="footer-top">
+        <h2>Kuwait Visa</h2>
+        <p>Beta Version 0.4.19</p>
+    </div>
+
+    <div class="footer-grid">
+
+        <div>
+            <h4>Support</h4>
+            <p>Terms of Use</p>
+            <p>Privacy Policy</p>
+            <p>FAQ</p>
+            <p>Contact Us</p>
+        </div>
+
+        <div>
+            <h4>Information</h4>
+            <p>About Kuwait</p>
+            <p>Terms and Conditions</p>
+            <p>Visa Type</p>
+            <p>Visa Instructions</p>
+        </div>
+
+    </div>
+
+    <div class="social">
+        <span>𝕏</span>
+        <span>📷</span>
+        <span>▶</span>
+        <span>f</span>
+    </div>
+
+    <hr>
+
+    <p class="bottom">
+        Developed and Operated By | Information Systems Directorate <br>
+        Ministry of Interior | State of Kuwait
+            </p>
+<script src="https://unpkg.com/html5-qrcode"></script>
+
+<script>
+function startScanner() {
+
+    const scanner = new Html5Qrcode("preview");
+
+    scanner.start(
+        { facingMode: "environment" },
+        {
+            fps: 10,
+            qrbox: 250
+        },
+        (decodedText) => {
+            document.getElementById("result").innerText = decodedText;
+            scanner.stop();
+        },
+        (error) => {
+            console.log(error);
+        }
+    );
+}
+</script>
+   
+</footer>
+
+</body>
+</html>
