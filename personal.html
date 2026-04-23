@@ -1,1 +1,296 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kuwait eVisa</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --blue:#1a458f;
+  --dark:#162f56;
+}
+
+/* PAGE */
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#eef6fb;
+  font-family:Poppins;
+}
+
+/* CARD */
+.evisa{
+  width:900px;
+  height:600px;
+  border-radius:14px;
+  position:relative;
+  overflow:hidden;
+  box-shadow:0 10px 40px rgba(0,0,0,0.15);
+  padding:30px;
+
+  /* 🔥 REALISTIC BACKGROUND */
+  background:
+    radial-gradient(circle at 20% 30%, rgba(26,69,143,0.08) 2px, transparent 3px),
+    radial-gradient(circle at 80% 70%, rgba(26,69,143,0.05) 2px, transparent 3px),
+    linear-gradient(135deg,#f7fbff,#eef6fb,#ffffff);
+  background-size:40px 40px,60px 60px,cover;
+}
+
+/* FADED EMBLEM */
+.evisa::before{
+  content:"";
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:380px;
+  height:380px;
+  background:url("photo_2025-11-12_00-07-48.jpg") no-repeat center;
+  background-size:contain;
+  opacity:0.05;
+}
+
+/* DOT TOP */
+.evisa::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:150px;
+  background:radial-gradient(rgba(26,69,143,0.15) 1px, transparent 1px);
+  background-size:12px 12px;
+  opacity:0.4;
+}
+
+/* HEADER */
+.header{
+  display:flex;
+  justify-content:space-between;
+}
+
+.title{
+  font-weight:700;
+  font-size:26px;
+  color:var(--blue);
+}
+
+.title span{
+  display:block;
+  font-family:Tajawal;
+  font-size:18px;
+}
+
+.subtitle{
+  font-size:13px;
+  margin-top:5px;
+}
+
+.logo{
+  width:80px;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  margin-top:20px;
+  gap:15px;
+}
+
+/* TEXT */
+.label{
+  font-weight:700;
+  font-size:14px;
+  color:var(--blue);
+}
+
+.value{
+  font-weight:700;
+  font-size:17px;
+  color:var(--dark);
+  margin-top:4px;
+}
+
+/* CENTER */
+.center-title{
+  font-size:20px;
+  font-weight:700;
+  color:var(--dark);
+}
+
+/* PHOTO */
+.photo{
+  width:100px;
+  height:100px;
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:0 4px 12px rgba(0,0,0,0.2);
+  margin-top:10px;
+}
+
+.photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* QR */
+.qr{
+  width:110px;
+  height:110px;
+  background:#fff;
+  padding:6px;
+  border-radius:8px;
+  margin-top:10px;
+}
+
+.qr img{
+  width:100%;
+}
+
+/* RIGHT ALIGN */
+.right{
+  text-align:right;
+}
+
+/* WATERMARK TEXT */
+.watermark{
+  position:absolute;
+  bottom:90px;
+  left:40px;
+  font-size:52px;
+  font-weight:900;
+  color:rgba(26,69,143,0.05);
+  letter-spacing:8px;
+}
+
+/* MRZ */
+.mrz{
+  position:absolute;
+  bottom:20px;
+  left:20px;
+  right:20px;
+  font-family:monospace;
+  font-size:14px;
+  background:rgba(255,255,255,0.8);
+  padding:10px;
+  border-radius:6px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="evisa">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div>
+      <div class="title">
+        STATE OF KUWAIT
+        <span>دولة الكويت</span>
+      </div>
+      <div class="subtitle">eVISA — التأشيرة الإلكترونية</div>
+    </div>
+
+    <img src="photo_2025-11-12_00-07-48.jpg" class="logo">
+  </div>
+
+  <!-- GRID -->
+  <div class="grid">
+
+    <!-- LEFT -->
+    <div>
+      <div>
+        <div class="label">Passport No.</div>
+        <div class="value">EP7325058</div>
+      </div>
+
+      <div>
+        <div class="label">Nationality</div>
+        <div class="value">ETHIOPIA</div>
+      </div>
+
+      <div>
+        <div class="label">Sex</div>
+        <div class="value">F</div>
+      </div>
+
+      <div class="qr">
+        <img src="photo_2026-03-03_14-08-20.jpg">
+      </div>
+    </div>
+
+    <!-- CENTER -->
+    <div>
+      <div class="center-title">Visa Type</div>
+      <div class="value">B - Work Visa</div>
+
+      <br>
+
+      <div>
+        <div class="label">Expiry Date</div>
+        <div class="value">2028-04-20</div>
+      </div>
+
+      <div>
+        <div class="label">Occupation</div>
+        <div class="value">Hotel Host / Waiter</div>
+      </div>
+
+      <div class="photo">
+        <img src="photo_2026-02-24_10-53-10.jpg">
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="right">
+      <div>
+        <div class="label">Visa Number</div>
+        <div class="value">00026521</div>
+      </div>
+
+      <div>
+        <div class="label">Issue Date</div>
+        <div class="value">2026-04-20</div>
+      </div>
+
+      <div>
+        <div class="label">Reference</div>
+        <div class="value">26531778</div>
+      </div>
+
+      <div>
+        <div class="label">Name</div>
+        <div class="value">ADEM SEID</div>
+      </div>
+
+      <div>
+        <div class="label">Birth Date</div>
+        <div class="value">1977-02-08</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- WATERMARK -->
+  <div class="watermark">STATE OF KUWAIT</div>
+
+  <!-- MRZ -->
+  <div class="mrz">
+    P&lt;ETHYIMAM&lt;&lt;ADEM&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;<br>
+    EP7325058ETH7702082M2706085&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;
+  </div>
+
+</div>
+
+</body>
+</html>
