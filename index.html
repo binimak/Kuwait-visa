@@ -983,87 +983,61 @@ button {
 <script src="https://unpkg.com/html5-qrcode"></script>
 
 <script>
-   
-function checkCode() {
-    var code = document.getElementById("visaCode").value;
+const users = {
+    "123456789": {
+        name: "MESERET ABDETA",
+        passport: "EQ2546230",
+        nationality: "ETHIOPIA",
+        sex: "F",
+        visa: "123456789",
+        issue: "2026-04-20",
+        reference: "26531778",
+        birth: "1995-05-10"
+    },
 
-    var users = {
-        "12345": {
-            name: "MESERET ABDETA",
-            passport: "EQ2546230",
-            nationality: "ETHIOPIA",
-            visa: "00026521",
-            reference: "26531778",
-            photo: "img/user1.jpg"
-        },
-        "67890": {
-            name: "JOHN DOE",
-            passport: "AA123456",
-            nationality: "USA",
-            visa: "99999999",
-            reference: "88888888",
-            photo: "img/user2.jpg"
-        }
-    };
+    "987654321": {
+        name: "JOHN DOE",
+        passport: "AA123456",
+        nationality: "USA",
+        sex: "M",
+        visa: "987654321",
+        issue: "2026-03-11",
+        reference: "99887766",
+        birth: "1990-01-01"
+    },
 
-function checkCode() {
-    var code = document.getElementById("visaCode").value;
-    var error = document.getElementById("error");
-    var loader = document.getElementById("loader");
-    var btnText = document.getElementById("btnText");
-
-    var users = {
-        "12345": "personal.html",
-        "67890": "personal.html"
-    };
-
-    error.innerText = "";
-
-    if(code === "") {
-        error.innerText = "Please enter code";
-        return;
+    "098746631": {
+        name: "ABEL TESFAYE",
+        passport: "EP999999",
+        nationality: "ETHIOPIA",
+        sex: "M",
+        visa: "098746631",
+        issue: "2026-05-01",
+        reference: "12312312",
+        birth: "1988-02-16"
     }
+};
 
-    // show loader
-    loader.style.display = "inline-block";
-    btnText.style.opacity = "0.5";
+// get code from previous page
+const code = localStorage.getItem("visaCode");
 
-    setTimeout(function(){
-        if(users[code]) {
-            window.location.href = users[code];
-        } else {
-            error.innerText = "Invalid Code";
-            loader.style.display = "none";
-            btnText.style.opacity = "1";
-        }
-    }, 1000); // fake loading
-}
-    if(users[code]) {
-        localStorage.setItem("userData", JSON.stringify(users[code]));
-        window.location.href = "personal.html";
-    } else {
-        alert("Invalid Code");
-    }
-}
+// if user exists
+if(code && users[code]){
 
-function startScanner() {
+    const user = users[code];
 
-    const scanner = new Html5Qrcode("preview");
+    document.getElementById("name").innerText = user.name;
+    document.getElementById("passport").innerText = user.passport;
+    document.getElementById("nationality").innerText = user.nationality;
+    document.getElementById("sex").innerText = user.sex;
+    document.getElementById("visa").innerText = user.visa;
+    document.getElementById("issue").innerText = user.issue;
+    document.getElementById("reference").innerText = user.reference;
+    document.getElementById("birth").innerText = user.birth;
 
-    scanner.start(
-        { facingMode: "environment" },
-        {
-            fps: 10,
-            qrbox: 250
-        },
-        (decodedText) => {
-            document.getElementById("result").innerText = decodedText;
-            scanner.stop();
-        },
-        (error) => {
-            console.log(error);
-        }
-    );
+}else{
+    // if no code → back
+    window.location.href = "index.html";
 }
 </script>
    
