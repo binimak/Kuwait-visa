@@ -23,10 +23,11 @@
     box-sizing:border-box;
     font-family: 'Segoe UI', sans-serif;
 }
-body{
-    font-family: 'Poppins', sans-serif;
-    background:var(--bg);
-    color:var(--text-dark);
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f6f8;
+    margin: 0;
+    padding: 15px;
 }
 
 /* HEADER */
@@ -175,9 +176,10 @@ header{
     border-radius:25px;
     overflow:hidden;
     position:relative;
-height:75vh;   /* ስክሪን 75% */
-    min-height:420px;
+    min-height:300px;
+    height:auto;
 }
+
 
 .hero img{
     width:100%;
@@ -312,44 +314,72 @@ height:75vh;   /* ስክሪን 75% */
     color:#4a6b7c;
     line-height:1.6;
 }
-/* IMAGE CARD */
-.image-card{
+    image-card{
     margin:15px;
     border-radius:20px;
     overflow:hidden;
-    background:white;
-    box-shadow:0 5px 15px rgba(0,0,0,0.05);
+    background:#ffffff;
+    border:1px solid #d9e6ee;
+    box-shadow:0 4px 12px rgba(0,0,0,0.05);
 }
 
 .image-card img{
     width:100%;
-    height:180px;
+    height:200px;
     object-fit:cover;
+    display:block;
 }
 
 /* VISA DETAILS CARD */
 .details{
-    padding:15px;
+    padding:18px;
+}
+.visa-card h3 {
+    color: #1f6f8b;
+    margin-bottom: 10px;
 }
 
+/* number */
+.visa-card h1 {
+    font-size: 40px;
+    margin: 5px 0;
+    color: #1f6f8b;
+}
+
+.visa-card h1 span {
+    font-size: 18px;
+    color: #3aa3c1;
+}
+
+/* text */
+.visa-card p {
+    color: #555;
+    font-size: 14px;
+}
 .details h3{
     color:#0b5f84;
-    margin-bottom:10px;
+    font-size:20px;
+    margin-bottom:12px;
+    font-weight:600;
 }
 
 .details ul{
     list-style:none;
 }
 
-.details li{
+details li{
     margin:8px 0;
-    color:#4a6b7c;
+    color:#3f5f6f;
+    line-height:1.6;
+    font-size:14px;
 }
 
 .details li::before{
     content:"✔ ";
     color:#1fa2d6;
     font-weight:bold;
+    margin-right:8px;
+
 }
 .card{
     background:var(--card);
@@ -386,9 +416,66 @@ height:75vh;   /* ስክሪን 75% */
 
 .menu-btn {
     font-size:22px;
-    color: #0b5c74;
-    padding: 5px 8px;
+    color:#0b5c74;
+    padding:5px 8px;
+}  
+   .visa-card {
+    background: linear-gradient(180deg, #e6f2f5, #ffffff);
+    border-radius: 25px;
+    padding: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.05);
 }
+.icon {
+    width: 70px;
+    height: 70px;
+    background: #1f6f8b;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon img {
+    width: 35px;
+}
+.visa-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    display:block;
+}
+
+.visa-content{
+    padding:18px;
+}
+
+.visa-content h3{
+    color:#1f6f8b;
+    font-size:20px;
+    margin-bottom:12px;
+}
+
+.visa-content ul{
+    list-style:none;
+}
+
+.visa-content li{
+    margin:8px 0;
+    font-size:14px;
+    color:#3f5f6f;
+    line-height:1.6;
+}
+
+.visa-content li::before{
+    content:"✔";
+    color:#2aa7c9;
+    font-weight:bold;
+    margin-right:8px;
+}
+
 /* SELECT */
 select{
     width:100%;
@@ -547,7 +634,81 @@ footer p{
     margin-top:20px;
     box-shadow:0 5px 15px rgba(0,0,0,0.05);
 }
+.download {
+    text-align: center;
+    padding: 40px;
+}
+.visa-check {
+    max-width: 350px;
+    margin: 40px auto;
+    padding: 25px;
+    background: linear-gradient(135deg, #d9edf2, #c4e3ea);
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
 
+.visa-check h3 {
+    margin-bottom: 15px;
+    color: #0b5c6b;
+}
+
+.visa-check input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+.visa-check input:focus {
+    border-color: #007B8A;
+}
+
+.visa-check button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #007B8A;
+    color: white;
+    cursor: pointer;
+    position: relative;
+}
+
+.visa-check button:hover {
+    background: #005f6b;
+}
+
+.error {
+    color: red;
+    font-size: 13px;
+    height: 15px;
+}
+
+/* loader */
+.loader {
+    display: none;
+    width: 18px;
+    height: 18px;
+    border: 3px solid white;
+    border-top: 3px solid transparent;
+    border-radius: 50%;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    100% { transform: translateY(-50%) rotate(360deg); }
+}
+.qr-code img {
+    width: 150px;
+    margin-top: 20px;
+}
 video {
     width: 100%;
     border-radius: 10px;
@@ -627,27 +788,32 @@ button {
 
 <!-- STATS -->
 <div class="stats">
-
-    <div class="stat-card">
-        <div class="stat-icon"></div>
-        <h3>Tourist Visa</h3>
-        <b>95</b>
-        <p>Thousand</p>
+<div class="visa-card">
+    <div class="icon">
+        <img src="">
     </div>
+    <h3>Tourist Visa</h3>
+    <h1>95 <span>Thousand</span></h1>
+    <p>Visas issued in 2025</p>
+</div>
 
-    <div class="stat-card">
-        <div class="stat-icon"></div>
-        <h3>Family Visa</h3>
-        <b>74</b>
-        <p>Thousand</p>
+<div class="visa-card">
+    <div class="icon">
+        <img src="icons/family.png">
     </div>
+    <h3>Family Visa</h3>
+    <h1>74 <span>Thousand</span></h1>
+    <p>Visas issued in 2025</p>
+</div>
 
-    <div class="stat-card">
-        <div class="stat-icon"></div>
-        <h3>Business Visa</h3>
-        <b>25</b>
-        <p>Thousand</p>
+<div class="visa-card">
+    <div class="icon">
+        <img src="icons/business.png">
     </div>
+    <h3>Business Visa</h3>
+    <h1>25 <span>Thousand</span></h1>
+    <p>Visas issued in 2025</p>
+</div>
 
 </div>
 
@@ -662,19 +828,36 @@ button {
         for the purpose of tourism and entertainment. The tourist visa allows its 
         holder to visit tourist attractions and explore the country.
     </p>
-
+  </div>
+    
     <select>
         <option>Select Nationality</option>
     </select>
-</div>
 
-<div class="tabs">
+    
+   <div class="tabs">
     <div class="tab active">Single Visit</div>
-    <div class="tab">Multiple Visit</div>
+       <div class="tab">Multiple Visit</div>
 </div>
+<div class="visa-check">
+    <h3>Enter Visa Code</h3>
+    
+    <input type="text" id="visaCode" placeholder="Enter your code">
 
+    <p id="error" class="error"></p>
+
+    <button onclick="checkCode()">
+        <span id="btnText">Submit</span>
+        <span id="loader" class="loader"></span>
+    </button>
+</div>
 <div class="card">
-    <h3>Tourism Visa</h3>
+    <div class="image-card">
+
+    <img src=" https://res.cloudinary.com/dwclusteb/image/upload/v1776763235/tourist-1_j1vwjm.png">
+        </div>     
+<div class="card">
+    <h3>Work Visa</h3>
     <ul>
         <li>Passport validity: No less than 6 months</li>
         <li>Entry permit validity: 30 days from the date of
@@ -688,53 +871,61 @@ button {
     </ul>
         
 </div>
+<div class="visa-card">
 
-<div class="card">
-    <h3>Family Visit Visa</h3>
-    <ul>
-        <li>Passport validity: No less than 6 months</li>
-        <li>Entry permit validity: 30 days from the date of
-            issuance</li>
-        <li>Stay duration: No more than 90 days from the
-            date of entry</li>
-        <li>Number of entries: Single entry</li>
-            <li>Prohibition: The visa holder is prohibited from working
-                and must leave the country upon the
-                expiration of the visit period</li>    
-    </ul>
-</div>
+    <img src="https://res.cloudinary.com/dwclusteb/image/upload/v1776816090/family-1_2_t3wui7.png">
 
-<div class="card">
-    <h3>Government Visa </h3>
-    <ul>
-        <li>Passport validity: No less than 6 months</li>
-        <li>Entry permit validity: 30 days from the date of 
-            issuance</li>
-        <li>Stay duration: No more than 90 days from the
-            date of entry</li>
-        <li>Number of entries: Single entry</li>
-        <li>Prohibition: The visa holder is prohibited from working
-            and must leave the country upon the expiration
-            of the visit period</li>
-        
-    </ul>
+    <div class="visa-content">
+        <h3>Business Visa</h3>
+
+        <ul>
+            <li><b>Passport validity:</b> No less than 6 months</li>
+            <li><b>Entry permit validity:</b> 30 days from the date of issuance</li>
+            <li><b>Stay duration:</b> No more than 30 days from the date of entry</li>
+            <li><b>Number of entries:</b> Single entry</li>
+            <li><b>Prohibition:</b> The visa holder is prohibited from working and must leave the country upon the expiration of the visit period</li>
+        </ul>
+
     </div>
-    
-    <div class="card">
-    <h3>Business Visa </h3>
-    <ul>
-        <li>Passport validity: No less than 6 months</li>
-        <li>Entry permit validity: 30 days from the date of 
-            issuance</li>
-        <li>Stay duration: No more than 90 days from the
-            date of entry</li>
-        <li>Number of entries: Single entry</li>
-        <li>Prohibition: The visa holder is prohibited from working
-            and must leave the country upon the expiration
-            of the visit period</li>
-        
-    </ul>
+
 </div>
+
+
+<div class="visa-card">
+
+    <img src="https://res.cloudinary.com/dwclusteb/image/upload/v1776816171/government-1_f9pkpc.png">
+
+    <div class="visa-content">
+        <h3>Family Visit Visa</h3>
+
+        <ul>
+            <li><b>Passport validity:</b> No less than 6 months</li>
+            <li><b>Entry permit validity:</b> 30 days from the date of issuance</li>
+            <li><b>Stay duration:</b> No more than 90 days from the date of entry</li>
+            <li><b>Number of entries:</b> Single entry</li>
+            <li><b>Prohibition:</b> The visa holder is prohibited from working and must leave the country upon the expiration of the visit period</li>
+        </ul>
+
+    </div>
+
+</div>
+
+
+<div class="visa-card">
+
+    <img src="https://res.cloudinary.com/dwclusteb/image/upload/v1776816271/business-1_ne5uz3.png">
+    <div class="visa-content">
+        <h3>Government Visa</h3>
+
+        <ul>
+            <li><b>Passport validity:</b> No less than 6 months</li>
+            <li><b>Entry permit validity:</b> 30 days from the date of issuance</li>
+            <li><b>Stay duration:</b> No more than 90 days from the date of entry</li>
+            <li><b>Number of entries:</b> Single entry</li>
+            <li><b>Prohibition:</b> The visa holder is prohibited from working and must leave the country upon the expiration of the visit period</li>
+        </ul>
+
+    </div>
 
 </div>
 
@@ -742,11 +933,16 @@ button {
 <div class="download">
     <h2>Download Kuwait Visa App</h2>
     <p>Available on iPhone and Android</p>
+
+    <div class="qr-code">
+        <img src="https://res.cloudinary.com/dwclusteb/image/upload/v1776816833/images_wlklha.png" alt="Scan QR Code to download app">
     </div>
+</div>
      
 <footer class="footer">
 
     <div class="footer-top">
+      
         <h2>Kuwait Visa</h2>
         <p>Beta Version 0.4.19</p>
     </div>
@@ -787,6 +983,69 @@ button {
 <script src="https://unpkg.com/html5-qrcode"></script>
 
 <script>
+   
+function checkCode() {
+    var code = document.getElementById("visaCode").value;
+
+    var users = {
+        "12345": {
+            name: "MESERET ABDETA",
+            passport: "EQ2546230",
+            nationality: "ETHIOPIA",
+            visa: "00026521",
+            reference: "26531778",
+            photo: "img/user1.jpg"
+        },
+        "67890": {
+            name: "JOHN DOE",
+            passport: "AA123456",
+            nationality: "USA",
+            visa: "99999999",
+            reference: "88888888",
+            photo: "img/user2.jpg"
+        }
+    };
+
+function checkCode() {
+    var code = document.getElementById("visaCode").value;
+    var error = document.getElementById("error");
+    var loader = document.getElementById("loader");
+    var btnText = document.getElementById("btnText");
+
+    var users = {
+        "12345": "personal.html",
+        "67890": "personal.html"
+    };
+
+    error.innerText = "";
+
+    if(code === "") {
+        error.innerText = "Please enter code";
+        return;
+    }
+
+    // show loader
+    loader.style.display = "inline-block";
+    btnText.style.opacity = "0.5";
+
+    setTimeout(function(){
+        if(users[code]) {
+            window.location.href = users[code];
+        } else {
+            error.innerText = "Invalid Code";
+            loader.style.display = "none";
+            btnText.style.opacity = "1";
+        }
+    }, 1000); // fake loading
+}
+    if(users[code]) {
+        localStorage.setItem("userData", JSON.stringify(users[code]));
+        window.location.href = "personal.html";
+    } else {
+        alert("Invalid Code");
+    }
+}
+
 function startScanner() {
 
     const scanner = new Html5Qrcode("preview");
