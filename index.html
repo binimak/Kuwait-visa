@@ -427,8 +427,9 @@ Saudi Arabia is opening its doors to the world through its new tourist visa. Vis
   </div>  <div class="footer-bottom">
     © 2026 Saudi Arabia Visa. All Rights Reserved.
   </div>
-</footer><script>
-const users={
+</footer>
+<script>
+const users = {
 "123456789":{
 name:"MESERET ABDETA",
 passport:"EQ2546230",
@@ -452,41 +453,33 @@ birth:"1990-01-01"
 };
 
 function checkCode(){
-const code=document.getElementById("visaCode").value.trim();
-const error=document.getElementById("error");
-const loader=document.getElementById("loader");
-const btnText=document.getElementById("btnText");
-const result=document.getElementById("resultBox");
+const code = document.getElementById("visaCode").value.trim();
+const error = document.getElementById("error");
+const loader = document.getElementById("loader");
+const btnText = document.getElementById("btnText");
 
-loader.style.display="block";
-btnText.style.display="none";
+loader.style.display = "block";
+btnText.style.display = "none";
 
 setTimeout(()=>{
-loader.style.display="none";
-btnText.style.display="inline";
+loader.style.display = "none";
+btnText.style.display = "inline";
 
 if(!users[code]){
-error.innerText="Invalid code";
-result.style.display="none";
+error.innerText = "Invalid code ❌";
 return;
 }
 
-error.innerText="";
-const u=users[code];
+error.innerText = "";
 
-document.getElementById("name").innerText=u.name;
-document.getElementById("passport").innerText=u.passport;
-document.getElementById("nationality").innerText=u.nationality;
-document.getElementById("sex").innerText=u.sex;
-document.getElementById("visa").innerText=u.visa;
-document.getElementById("issue").innerText=u.issue;
-document.getElementById("reference").innerText=u.reference;
-document.getElementById("birth").innerText=u.birth;
+// 👉 save user data
+localStorage.setItem("visaUser", JSON.stringify(users[code]));
 
-result.style.display="block";
+// 👉 go to personal page
+window.location.href = "personal.html";
 
 },1000);
 }
-</script><!-- ADDED IMAGE CARD --><div class="card">
+</script>
 </body>
 </html>
