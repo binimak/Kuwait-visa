@@ -1,294 +1,393 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kuwait eVisa</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>KSA Visa Exact Clone</title>
 
 <style>
-:root{
-  --blue:#1a458f;
-  --dark:#162f56;
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&family=Roboto+Mono:wght@400;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#dcdcdc;
+    font-family:'Tajawal',sans-serif;
+    padding:20px;
 }
 
 /* PAGE */
-body{
-  margin:0;
-  height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:#eef6fb;
-  font-family:Poppins;
+.page{
+    width:980px;
+    height:1650px;
+    margin:auto;
+    background:#f8f8f8;
+    position:relative;
+    padding:42px 55px;
+    overflow:hidden;
+    color:#3b2a70;
 }
 
-/* CARD */
-.evisa{
-  width:900px;
-  height:600px;
-  border-radius:14px;
-  position:relative;
-  overflow:hidden;
-  box-shadow:0 10px 40px rgba(0,0,0,0.15);
-  padding:30px;
-
-  /* 🔥 REALISTIC BACKGROUND */
-  background:
-    radial-gradient(circle at 20% 30%, rgba(26,69,143,0.08) 2px, transparent 3px),
-    radial-gradient(circle at 80% 70%, rgba(26,69,143,0.05) 2px, transparent 3px),
-    linear-gradient(135deg,#f7fbff,#eef6fb,#ffffff);
-  background-size:40px 40px,60px 60px,cover;
-}
-
-/* FADED EMBLEM */
-.evisa::before{
-  content:"";
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  width:380px;
-  height:380px;
-  background:url("photo_2025-11-12_00-07-48.jpg") no-repeat center;
-  background-size:contain;
-  opacity:0.05;
-}
-
-/* DOT TOP */
-.evisa::after{
-  content:"";
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:150px;
-  background:radial-gradient(rgba(26,69,143,0.15) 1px, transparent 1px);
-  background-size:12px 12px;
-  opacity:0.4;
+/* subtle watermark */
+.page::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+    radial-gradient(circle at center,
+    rgba(79,160,120,.06) 0 2%,
+    transparent 2% 100%);
+    background-size:180px 180px;
+    opacity:.55;
 }
 
 /* HEADER */
 .header{
-  display:flex;
-  justify-content:space-between;
+    position:relative;
+    z-index:2;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
 }
 
-.title{
-  font-weight:700;
-  font-size:26px;
-  color:var(--blue);
+.left-logo{
+    color:#4d2d86;
+    line-height:.82;
+    font-weight:800;
 }
 
-.title span{
-  display:block;
-  font-family:Tajawal;
-  font-size:18px;
+.left-logo .big{
+    font-size:62px;
 }
 
-.subtitle{
-  font-size:13px;
-  margin-top:5px;
+.left-logo .mini{
+    font-size:11px;
+    margin-top:8px;
 }
 
-.logo{
-  width:80px;
+.right-logo{
+    text-align:right;
+    color:#111;
 }
 
-/* GRID */
-.grid{
-  display:grid;
-  grid-template-columns:1fr 1fr 1fr;
-  margin-top:20px;
-  gap:15px;
+.right-logo .ar{
+    font-size:36px;
+    font-weight:800;
 }
 
-/* TEXT */
-.label{
-  font-weight:700;
-  font-size:14px;
-  color:var(--blue);
+.right-logo .en{
+    font-size:15px;
+    letter-spacing:2px;
+    margin-top:3px;
 }
 
-.value{
-  font-weight:700;
-  font-size:17px;
-  color:var(--dark);
-  margin-top:4px;
+/* TOP SECTION */
+.top{
+    position:relative;
+    z-index:2;
+    margin-top:22px;
+    display:grid;
+    grid-template-columns:250px 1fr;
+    gap:38px;
 }
 
-/* CENTER */
-.center-title{
-  font-size:20px;
-  font-weight:700;
-  color:var(--dark);
-}
-
-/* PHOTO */
 .photo{
-  width:100px;
-  height:100px;
-  border-radius:10px;
-  overflow:hidden;
-  box-shadow:0 4px 12px rgba(0,0,0,0.2);
-  margin-top:10px;
+    width:240px;
+    height:285px;
+    background:#ddd;
+    overflow:hidden;
 }
 
 .photo img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    filter:blur(2px);
 }
 
-/* QR */
-.qr{
-  width:110px;
-  height:110px;
-  background:#fff;
-  padding:6px;
-  border-radius:8px;
-  margin-top:10px;
+/* TABLE */
+.table{
+    width:105%;
 }
 
-.qr img{
-  width:100%;
+.row{
+    display:grid;
+    grid-template-columns:190px 1fr 190px;
+    align-items:center;
+    min-height:49px;
+    border-bottom:2px solid #8e7ab8;
+    font-size:18px;
 }
 
-/* RIGHT ALIGN */
+.left{
+    color:#222;
+}
+
+.center{
+    text-align:center;
+    font-weight:800;
+    letter-spacing:.5px;
+}
+
 .right{
-  text-align:right;
+    text-align:right;
+    direction:rtl;
+    color:#222;
 }
 
-/* WATERMARK TEXT */
-.watermark{
-  position:absolute;
-  bottom:90px;
-  left:40px;
-  font-size:52px;
-  font-weight:900;
-  color:rgba(26,69,143,0.05);
-  letter-spacing:8px;
+/* stamps */
+.stamps{
+    text-align:center;
+    color:#8f6dc3;
+    font-size:40px;
+    letter-spacing:6px;
+    margin:14px 0 8px;
+    font-weight:700;
+}
+
+/* LOWER TABLE */
+.lower{
+    position:relative;
+    z-index:2;
+    margin-top:10px;
+}
+
+.lower .row{
+    min-height:48px;
+}
+
+/* fingerprint */
+.fingerprint{
+    position:absolute;
+    left:90px;
+    bottom:225px;
+    font-size:64px;
+    color:#2e9a70;
+    z-index:2;
+}
+
+/* bottom stamps */
+.bottom-stamps{
+    position:absolute;
+    left:55px;
+    right:55px;
+    bottom:175px;
+    text-align:center;
+    color:#8f6dc3;
+    font-size:45px;
+    letter-spacing:6px;
+    font-weight:70080;
+    z-index:3;
+}
+
+/* QR AREA */
+.scan{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:96px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:18px;
+    z-index:2;
+}
+
+.scan-text{
+    color:#111;
+    font-size:13px;
+    line-height:17px;
+    font-weight:700;
+    text-align:center;
+}
+
+.qr{
+    width:80px;
+    height:80px;
+    border:1px solid #2d9a70;
+    background:
+    repeating-linear-gradient(
+    90deg,
+    #000 0 4px,
+    #fff 4px 8px
+    ),
+    repeating-linear-gradient(
+    0deg,
+    transparent 0 2px,
+    rgba(0,0,0,.2) 4px 8px
+    );
 }
 
 /* MRZ */
 .mrz{
-  position:absolute;
-  bottom:20px;
-  left:20px;
-  right:20px;
-  font-family:monospace;
-  font-size:14px;
-  background:rgba(255,255,255,0.8);
-  padding:10px;
-  border-radius:6px;
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:20px;
+    text-align:center;
+    color:#111;
+    font-family:'Roboto Mono',monospace;
+    font-size:30px;
+    line-height:42px;
+    letter-spacing:7px;
+    z-index:2;
 }
 </style>
 </head>
-
 <body>
 
-<div class="evisa">
+<div class="page">
 
-  <!-- HEADER -->
-  <div class="header">
-    <div>
-      <div class="title">
-        STATE OF KUWAIT
-        <span>دولة الكويت</span>
-      </div>
-      <div class="subtitle">eVISA — التأشيرة الإلكترونية</div>
-    </div>
+<!-- HEADER -->
+<div class="header">
 
-    <img src="photo_2025-11-12_00-07-48.jpg" class="logo">
-  </div>
+<div class="left-logo">
+<div class="big">KSA<br>VISA</div>
+<div class="mini">تأشيرة سعودية</div>
+</div>
 
-  <!-- GRID -->
-  <div class="grid">
+<div class="right-logo">
+<div class="ar">المملكة العربية السعودية</div>
+<div class="en">KINGDOM OF SAUDI ARABIA</div>
+</div>
 
-    <!-- LEFT -->
-    <div>
-      <div>
-        <div class="label">Passport No.</div>
-        <div class="value">EP7325058</div>
-      </div>
+</div>
 
-      <div>
-        <div class="label">Nationality</div>
-        <div class="value">ETHIOPIA</div>
-      </div>
+<!-- TOP -->
+<div class="top">
 
-      <div>
-        <div class="label">Sex</div>
-        <div class="value">F</div>
-      </div>
+<div class="photo">
+<img src="photo.jpg" alt="photo">
+</div>
 
-      <div class="qr">
-        <img src="photo_2026-03-03_14-08-20.jpg">
-      </div>
-    </div>
+<div class="table">
 
-    <!-- CENTER -->
-    <div>
-      <div class="center-title">Visa Type</div>
-      <div class="value">B - Work Visa</div>
+<div class="row">
+<div class="left">Visa No.</div>
+<div class="center">6114753257</div>
+<div class="right">رقم التأشيرة</div>
+</div>
 
-      <br>
+<div class="row">
+<div class="left">Valid from</div>
+<div class="center">01/03/2024</div>
+<div class="right">صالحة اعتباراً من</div>
+</div>
 
-      <div>
-        <div class="label">Expiry Date</div>
-        <div class="value">2028-04-20</div>
-      </div>
+<div class="row">
+<div class="left">Valid until</div>
+<div class="center">30/05/2024</div>
+<div class="right">صالحة لغاية</div>
+</div>
 
-      <div>
-        <div class="label">Occupation</div>
-        <div class="value">Hotel Host / Waiter</div>
-      </div>
+<div class="row">
+<div class="left">Duration of Stay</div>
+<div class="center">90 Days &nbsp;&nbsp;&nbsp; ٩٠ يوم</div>
+<div class="right">مدة الإقامة</div>
+</div>
 
-      <div class="photo">
-        <img src="photo_2026-02-24_10-53-10.jpg">
-      </div>
-    </div>
+<div class="stamps">✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔</div>
 
-    <!-- RIGHT -->
-    <div class="right">
-      <div>
-        <div class="label">Visa Number</div>
-        <div class="value">00026521</div>
-      </div>
+<div class="row">
+<div class="left">Place of issue</div>
+<div class="center">Saudi Mission In Islamabad</div>
+<div class="right">مكان الإصدار</div>
+</div>
 
-      <div>
-        <div class="label">Issue Date</div>
-        <div class="value">2026-04-20</div>
-      </div>
+</div>
+</div>
 
-      <div>
-        <div class="label">Reference</div>
-        <div class="value">26531778</div>
-      </div>
+<!-- LOWER -->
+<div class="lower">
 
-      <div>
-        <div class="label">Name</div>
-        <div class="value">ADEM SEID</div>
-      </div>
+<div class="row">
+<div class="left">Visa Type</div>
+<div class="center">Work - عمل</div>
+<div class="right">نوع التأشيرة</div>
+</div>
 
-      <div>
-        <div class="label">Birth Date</div>
-        <div class="value">1977-02-08</div>
-      </div>
-    </div>
+<div class="row">
+<div class="left">Name</div>
+<div class="center">MUHAMMAD IJAZ HUSSAIN</div>
+<div class="right">الاسم</div>
+</div>
 
-  </div>
+<div class="row">
+<div class="left">Nationality</div>
+<div class="center">Pakistan - باكستان</div>
+<div class="right">الجنسية</div>
+</div>
 
-  <!-- WATERMARK -->
-  <div class="watermark">STATE OF KUWAIT</div>
+<div class="row">
+<div class="left">Passport No.</div>
+<div class="center">GX1519282</div>
+<div class="right">رقم الجواز</div>
+</div>
 
-  <!-- MRZ -->
-  <div class="mrz">
-    P&lt;ETHYIMAM&lt;&lt;ADEM&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;<br>
-    EP7325058ETH7702082M2706085&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;
-  </div>
+<div class="row">
+<div class="left">Ref. No.</div>
+<div class="center">188777999</div>
+<div class="right">رقم المستند</div>
+</div>
+
+<div class="row">
+<div class="left">Ref. Date</div>
+<div class="center">01/03/2024</div>
+<div class="right">التاريخ</div>
+</div>
+
+<div class="row">
+<div class="left">Occupation</div>
+<div class="center">Electronics Engineer - مهندس إلكترونيات</div>
+<div class="right">المهنة</div>
+</div>
+
+<div class="row">
+<div class="left">Employer name</div>
+<div class="center">مؤسسة لوفر للمقاولات العامة</div>
+<div class="right">اسم صاحب العمل</div>
+</div>
+
+<div class="row">
+<div class="left">Visa Fees</div>
+<div class="center">-</div>
+<div class="right">الرسوم</div>
+</div>
+
+</div>
+
+<div class="fingerprint"></div>
+
+<div class="bottom-stamps">
+✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔
+</div>
+
+<!-- QR -->
+<div class="scan">
+
+<div class="scan-text">
+For Visa Inquiry<br>
+Please scan QR code
+</div>
+
+<div class="qr"></div>
+
+<div class="scan-text">
+للاستعلام عن التأشيرة<br>
+يرجى مسح رمز الاستجابة السريعة
+</div>
+
+</div>
+
+<!-- MRZ -->
+<div class="mrz">
+1&lt;PAKALI&lt;&lt;MUHAMMAD&lt;IJAZ&lt;HUSSAIN&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;<br>
+GX15192829PAK0503199431301&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;06
+</div>
 
 </div>
 
