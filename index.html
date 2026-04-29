@@ -1,67 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kuwait Visa</title>
-
-<style>
+<title>Saudi Arabia Visa</title><style>
 :root{
-    --primary:#1f6f8b;        /* main blue */
+    --primary:#1f6f8b;
     --primary-dark:#155e75;
-    --accent:#2aa7c9;         /* light blue */
+    --accent:#2aa7c9;
     --text-dark:#1e3a4c;
     --text-light:#5f7d8a;
     --bg:#f3f7fa;
     --card:#ffffff;
     --border:#d9e6ee;
 }
-/* RESET */
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family: 'Segoe UI', sans-serif;
-}
-body {
-    font-family: Arial, sans-serif;
-    background: #f2f6f8;
-    margin: 0;
-    padding: 15px;
+    font-family:'Segoe UI',sans-serif;
 }
 
-/* HEADER */
-header{
+body{
+    background:#f2f6f8;
+    padding:15px;
+}
+
+.header{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:15px 20px;   /* ADD THIS */
-    background:#ffffff;
-    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+    padding:12px 16px;
+    border-radius:0 0 20px 20px;
+    background:linear-gradient(to right,#e6f3f7,#ffffff);
 }
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
-    padding: 12px 16px;
-    border-radius: 0 0 20px 20px;
-
-    background: linear-gradient(
-        to right,
-        #e6f3f7,
-        #ffffff
-    );
-
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-
-}
-.header-icons {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-/* LEFT */
 .left{
     display:flex;
     align-items:center;
@@ -70,29 +43,13 @@ header{
 
 .logo-img{
     width:40px;
-      height: 40px;
+    height:40px;
 }
-.logo-text h2 {
-    font-size: 18px;
-    color: #0b5c74;
-    margin: 0;
-    font-weight: 700;
-}
-#preview{
-    width:100%;
-    min-height:250px;
-    border-radius:10px;
-    overflow:hidden;
-}
-.logo-text span {
-    font-size: 14px;
-    color: #3fa7c4;
-}
+
 .logo-text span{
     display:block;
     font-weight:600;
     color:#1f6f8b;
-    font-size:18px;
 }
 
 .logo-text small{
@@ -100,14 +57,11 @@ header{
     font-size:13px;
 }
 
-/* RIGHT */
 .right{
     display:flex;
-    align-items:center;
     gap:10px;
 }
 
-/* circle icons */
 .icon-circle{
     width:36px;
     height:36px;
@@ -115,932 +69,424 @@ header{
     display:flex;
     align-items:center;
     justify-content:center;
-
     border:1px solid #cfe3ec;
-    color:#1f6f8b;
-    font-size:16px;
-
     background:white;
 }
 
-/* menu */
-.menu{
-    font-size:24px;
-    color:#1f6f8b;
-    margin-left:5px;
-}
-    .apply-btn{
-    padding:14px 28px;
-    border:none;
-    border-radius:30px;
-    font-size:16px;
-    font-weight:600;
-    color:white;
-    background:linear-gradient(to right,#8aaea0,#5f6c72);
-    backdrop-filter:blur(5px);
-}
-.logo{
-    font-size:20px;
-    font-weight:600;
-    color:#0b5f84;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.icons{
-    font-size:22px;
-    color:#0b5f84;
-}
-.icon-btn {
-    width: 38px;
-    height: 38px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50%;
-
-    background: white;
-    color: #0b5c74;
-
-    font-size: 16px;
-
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
-
-/* HERO */
 .hero{
     margin:15px;
     border-radius:25px;
     overflow:hidden;
     position:relative;
-    min-height:300px;
-    height:auto;
 }
-
 
 .hero img{
     width:100%;
-    height:100%;
+    height:300px;
     object-fit:cover;
     filter:brightness(0.7);
 }
+
 .overlay{
     position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:linear-gradient(
-        to bottom,
-        rgba(0,0,0,0.2),
-        rgba(0,0,0,0.65)
-    );
+    inset:0;
+    background:linear-gradient(to bottom,rgba(0,0,0,0.2),rgba(0,0,0,0.65));
 }
+
 .hero-content{
     position:absolute;
     top:50%;
-     right:20px;
     left:20px;
     transform:translateY(-50%);
     color:white;
 }
 
-.hero h1{
-    font-size:24px;
-    margin-bottom:20px;
-        font-weight:600;
-}
-    
-
-.hero ul{
-    list-style:none;
-    line-height:1.8;
-    margin-bottom:15px;
-}
-
-.hero button{
-    background:rgba(255,255,255,0.3);
-    border:none;
-    padding:12px 25px;
-    border-radius:30px;
-    color:white;
-    font-weight:bold;
-    backdrop-filter:blur(5px);
-}
-
-/* STATS */
-.stats{
-    padding:15px;
-}
-
-.stat-card{
-    background:linear-gradient(#eaf4f9,#ffffff);
-    border-radius:20px;
-    text-align:center;
-    padding:20px;
-    margin-bottom:15px;
-}
-
-.stat-icon{
-    width:60px;
-    height:60px;
-    background:#0b5f84;
-    border-radius:50%;
-    margin:0 auto 10px;
-}
-
-.stat-card h3{
-    color:#0b5f84;
-}
-
-.stat-card b{
-    font-size:35px;
-    color:#0b5f84;
-}
-/* steps */
 .steps{
-    display:flex;
-    flex-direction:column;
-    gap:14px;
-    margin-bottom:30px;
+    margin:15px 0;
 }
 
 .step{
     display:flex;
-    align-items:center;
-    gap:12px;
+    gap:10px;
+    margin:6px 0;
 }
 
-/* icon circle */
-.step span{
-    width:40px;
-    height:40px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:50%;
-    background:rgba(255,255,255,0.25);
-    backdrop-filter:blur(5px);
-    font-size:20px;
+.apply-btn{
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    background:linear-gradient(to right,#8aaea0,#5f6c72);
+    color:white;
 }
 
-/* text */
-.step p{
-    font-size:15px;
-    font-weight:500;
-}
-/* SECTION */
-.section{
-    padding:15px;
-    
-}
-.section-box{
+/* NEW CARD ADDED SECTION */
+.new-card{
+    background:#ffffff;
     margin:15px;
     padding:20px;
     border-radius:20px;
-    background:linear-gradient(180deg,#eaf4f9,#ffffff);
-    border:1px solid #d6e6ef;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    border:1px solid #e3eef3;
 }
 
-.section-box h2{
-    color:#0b5f84;
+.new-card h3{
+    color:#1f6f8b;
     margin-bottom:10px;
 }
 
-.section-box p{
-    color:#4a6b7c;
-    line-height:1.6;
+.new-card p{
+    color:#5f7d8a;
+    line-height:1.5;
 }
-    image-card{
-    margin:15px;
+
+.visa-check{
+    max-width:350px;
+    margin:30px auto;
+    padding:20px;
+    background:#d9edf2;
     border-radius:20px;
+    text-align:center;
+}
+
+.visa-check input{
+    width:100%;
+    padding:10px;
+    margin-bottom:10px;
+}
+
+.visa-check button{
+    width:100%;
+    padding:10px;
+    background:#007B8A;
+    color:white;
+    border:none;
+    position:relative;
+}
+
+.result-box{
+    display:none;
+    background:white;
+    margin:15px;
+    padding:20px;
+    border-radius:20px;
+}
+
+.error{
+    color:red;
+}
+
+.loader{
+    display:none;
+    width:18px;
+    height:18px;
+    border:3px solid white;
+    border-top:3px solid transparent;
+    border-radius:50%;
+    position:absolute;
+    right:10px;
+    top:50%;
+    transform:translateY(-50%);
+    animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+    100%{transform:translateY(-50%) rotate(360deg);}
+}
+
+.footer{
+    background:#f6f9fc;
+    padding:20px;
+    border-radius:20px;
+    margin-top:20px;
+}
+/* PROFESSIONAL FOOTER CSS */
+.footer{
+    background:#0f2d3a;
+    color:white;
+    margin-top:30px;
+    border-radius:20px 20px 0 0;
     overflow:hidden;
-    background:#ffffff;
-    border:1px solid #d9e6ee;
-    box-shadow:0 4px 12px rgba(0,0,0,0.05);
+}
+
+.footer-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    padding:25px;
+    gap:20px;
+}
+
+.footer-col{
+    flex:1;
+    min-width:200px;
+}
+
+.footer-col h3{
+    margin-bottom:10px;
+    color:#2aa7c9;
+}
+
+.footer-col a{
+    display:block;
+    color:#cfe3ec;
+    text-decoration:none;
+    margin:5px 0;
+}
+
+.footer-col a:hover{
+    color:white;
+}
+
+.social span{
+    display:inline-block;
+    margin-right:10px;
+    font-size:18px;
+    cursor:pointer;
+}
+
+.footer-bottom{
+    text-align:center;
+    padding:12px;
+    background:#0b2230;
+    font-size:13px;
+    color:#9fb8c4;
+}
+
+/* CENTER CARD FIX */
+.card{
+    margin:15px auto;
+    max-width:420px;
+    background:#fff;
+    border-radius:20px;
+    padding:15px;
+    display:flex;
+    justify-content:center;
 }
 
 .image-card img{
     width:100%;
-    height:200px;
-    object-fit:cover;
-    display:block;
-}
-
-/* VISA DETAILS CARD */
-.details{
-    padding:18px;
-}
-.visa-card h3 {
-    color: #1f6f8b;
-    margin-bottom: 10px;
-}
-
-/* number */
-.visa-card h1 {
-    font-size: 40px;
-    margin: 5px 0;
-    color: #1f6f8b;
-}
-
-.visa-card h1 span {
-    font-size: 18px;
-    color: #3aa3c1;
-}
-
-/* text */
-.visa-card p {
-    color: #555;
-    font-size: 14px;
-}
-.details h3{
-    color:#0b5f84;
-    font-size:20px;
-    margin-bottom:12px;
-    font-weight:600;
-}
-
-.details ul{
-    list-style:none;
-}
-
-details li{
-    margin:8px 0;
-    color:#3f5f6f;
-    line-height:1.6;
-    font-size:14px;
-}
-
-.details li::before{
-    content:"✔ ";
-    color:#1fa2d6;
-    font-weight:bold;
-    margin-right:8px;
-
-}
-.card{
-    background:var(--card);
-    border-radius:20px;
-    padding:18px;
-    margin-bottom:15px;
-    border:1px solid var(--border);
-    box-shadow:0 4px 12px rgba(0,0,0,0.04);
-}
-
-.card h3{
-    color:var(--primary);
-    font-weight:600;
-    font-size:18px;
-    margin-bottom:10px;
-
-}
-
-.card ul{
-    list-style:none;
-}
-
-.card li{
-    color:var(--text-dark);
-    line-height:1.7;
-    font-size:14px;
-}
-.card li::before{
-    content:"✔";
-    color:var(--accent);
-    font-weight:bold;
-    margin-right:8px;
-}
-
-.menu-btn {
-    font-size:22px;
-    color:#0b5c74;
-    padding:5px 8px;
-}  
-   .visa-card {
-    background: linear-gradient(180deg, #e6f2f5, #ffffff);
-    border-radius: 25px;
-    padding: 25px;
-    text-align: center;
-    margin-bottom: 20px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.05);
-}
-.icon {
-    width: 70px;
-    height: 70px;
-    background: #1f6f8b;
-    border-radius: 50%;
-    margin: 0 auto 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.icon img {
-    width: 35px;
-}
-.visa-card img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-    display:block;
-}
-
-.visa-content{
-    padding:18px;
-}
-
-.visa-content h3{
-    color:#1f6f8b;
-    font-size:20px;
-    margin-bottom:12px;
-}
-
-.visa-content ul{
-    list-style:none;
-}
-
-.visa-content li{
-    margin:8px 0;
-    font-size:14px;
-    color:#3f5f6f;
-    line-height:1.6;
-}
-
-.visa-content li::before{
-    content:"✔";
-    color:#2aa7c9;
-    font-weight:bold;
-    margin-right:8px;
-}
-
-/* SELECT */
-select{
-    width:100%;
-    padding:15px;
     border-radius:15px;
-    border:none;
-    margin-top:10px;
 }
 
-.tabs{
-    display:flex;
-    gap:10px;
-    padding:0 15px;
-    margin-bottom:15px;
-}
-.title{
-    margin:20px 15px 10px;
-    font-size:20px;
-    color:#0b5f84;
-    font-weight:600; 
-}
-.tab{
-    flex:1;
-    padding:12px;
-    border-radius:25px;
-    text-align:center;
-    border:1px solid #0b5f84;
-    color:#0b5f84;
-    cursor:pointer;
-    transition:0.3s;
-}
+</style></head><body><header class="header">
+<div class="left">
+<img src="https://res.cloudinary.com/dwclusteb/image/upload/v1777498565/17be0853569c3e995c22d9ae6040ff28_qdc3ib.jpg" class="logo-img">
+<div class="logo-text">
+<span>Saudi Arabia Visa</span>
+<small>Visa</small>
+</div>
+</div><div class="right">
+<div class="icon-circle">🌐</div>
+<div class="icon-circle">ع</div>
+<div class="icon-circle">☾</div>
+</div>
+</header><div class="hero">
+<img src="https://res.cloudinary.com/dwclusteb/image/upload/v1777498686/8d694ec06bad05eb1f41846934d21bff_d7l5yb.jpg">
+<div class="overlay"></div><div class="hero-content">
+<h2>Apply for your visaقدّم طلب التأشيرة</h2>
+<div class="steps">
+<div class="step">👤 Create accountإنشاء حساب</div>
+<div class="step">📄 Complete profileإكمال الملف الشخصي</div>
+<div class="step">✔ Submit إرسال</div>
+<div class="step">🔔 Track تتبع</div>
+</div>
+<button class="apply-btn">Apply Now</button>
+</div>
+</div><!-- ADDED CARD --><div class="new-card">
+<h3>Important Notice   ملاحظة مهمة</h3>
+<p>
+ 
 
-.active{
-    background:#0b5f84;
-    color:white;
-}
-.tab.active{
-    background:linear-gradient(to right,#0b5f84,#1fa2d6);
-    color:white;
-    border:none;
-}
-.download{
-    background:linear-gradient(180deg,#eaf4f9,#dcecf6);
-    margin:15px;
-    padding:25px;
-    border-radius:20px;
-    text-align:center;
-}
-
-.download h2{
-    color:var(--primary);
-    font-weight:600;
-}
-
-.download p{
-    color:var(--text-light);
-}
-.footer{
-    background:#f6f9fc;
-    padding:30px 20px;
-    border-radius:25px 25px 0 0;
-    margin-top:20px;
-}
-/* HEADER */
-.footer-header{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    margin-bottom:20px;
-}
-footer h2{
-    color:var(--primary);
-}
-footer h4{
-    color:var(--primary);
-    margin-bottom:10px;
-}
-.footer-header img{
-    width:45px;
-}
-
-.footer-header h2{
-    margin:0;
-    color:#0b5f84;
-    font-size:20px;
-}
-
-.footer-header span{
-    color:#1fa2d6;
-    font-weight:600;
-}
-
-.footer-header p{
-    font-size:12px;
-    color:#7fa6bb;
-}
-
-/* GRID */
-.footer-grid{
-    display:flex;
-    justify-content:space-between;
-    margin-top:10px;
-      gap:20px;
-}
-
-.footer-grid h3{
-    color:#1fa2d6;
-    margin-bottom:10px;
-}
-
-.footer-grid p{
-    margin:6px 0;
-    color:#3c5f73;
-    font-size:14px;
-}
-footer p{
-    color:var(--text-light);
-    font-size:14px;
-}
-.footer-grid div{
-    flex:1;
-}
-.social span{
-    font-size:22px;
-    margin-right:15px;
-    color:var(--primary);
-}
-/* SOCIAL */
-.social{
-    display:flex;
-    justify-content:center;
-    font-size:22px;
-    margin:20px 0;
-    color:#0b5f84;
-    gap:20px
-}
-
-/* LINE */
-.divider{
-    height:1px;
-    background:#cfe3ef;
-    margin:10px 0;
-}
-
-/* BOTTOM TEXT */
-.bottom{
-    text-align:center;
-    font-size:12px;
-    color:#7fa6bb;
-}
-.scanner-box{
-    background:white;
-    padding:20px;
-    border-radius:20px;
-    text-align:center;
-    margin-top:20px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.05);
-}
-.download {
-    text-align: center;
-    padding: 40px;
-}
-.visa-check {
-    max-width: 350px;
-    margin: 40px auto;
-    padding: 25px;
-    background: linear-gradient(135deg, #d9edf2, #c4e3ea);
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-
-.visa-check h3 {
-    margin-bottom: 15px;
-    color: #0b5c6b;
-}
-
-.visa-check input {
-    width: 100%;
-    padding: 12px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    margin-bottom: 10px;
-    outline: none;
-}
-
-.visa-check input:focus {
-    border-color: #007B8A;
-}
-
-.visa-check button {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 10px;
-    background: #007B8A;
-    color: white;
-    cursor: pointer;
-    position: relative;
-}
-
-.visa-check button:hover {
-    background: #005f6b;
-}
-
-.error {
-    color: red;
-    font-size: 13px;
-    height: 15px;
-}
-
-/* loader */
-.loader {
-    display: none;
-    width: 18px;
-    height: 18px;
-    border: 3px solid white;
-    border-top: 3px solid transparent;
-    border-radius: 50%;
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-    100% { transform: translateY(-50%) rotate(360deg); }
-}
-.qr-code img {
-    width: 150px;
-    margin-top: 20px;
-}
-video {
-    width: 100%;
-    border-radius: 10px;
-    margin: 10px 0;
-}
-
-button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    background: #0b5c74;
-    color: white;
-}
-.center{
-    text-align:center;
-    margin-top:10px;
-}
-
-</style>
-
-</head>
-<body>
-
-<header class="header">
-
-    <div class="left">
-        <img src="https://res.cloudinary.com/dwclusteb/image/upload/v1776716698/kuwait-visa-logo_mzwd9u.svg " class="logo-img">
-        <div class="logo-text">
-            <span>Kuwait</span>
-            <small>Visa</small>
-        </div>
+يجب على جميع المتقدمين التأكد من أن جواز السفر صالح لمدة لا تقل عن 6 أشهر قبل التقديم. سيتم رفض الطلبات غير المكتملة تلقائياً.
+All applicants must ensure their passport is valid for at least 6 months before applying.
+Incomplete applications will be rejected automatically.
+</p>
+</div><div class="visa-check">
+<h3>Enter Visa Code    أدخل رمز التأشيرة</h3>
+<input type="text" id="visaCode">
+<p id="error" class="error"></p>
+<button onclick="checkCode()">
+<span id="btnText">Submit  إرسال</span>
+<span id="loader" class="loader"></span>
+</button>
     </div>
-
-    <div class="right">
-        <div class="icon-circle">🌐</div>
-        <div class="icon-circle">ع</div>
-        <div class="icon-circle">☾</div>
-        <div class="menu">≡</div>
-    </div>
-</header>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<!-- HERO -->
-<div class="hero">
-    <img src="https://res.cloudinary.com/dwclusteb/image/upload/v1776718011/349e238c676d5d602f3cd41a8dd9c8cc_tlczqy.jpg ">
-
-    <div class="overlay"></div>
-
-    <div class="hero-content">
-        <h1>Apply for your visa in a few simple steps..</h1>
-
-        <div class="steps">
-            <div class="step">
-                <span>👤</span>
-                <p>Create your account</p>
-            </div>
-
-            <div class="step">
-                <span>📄</span>
-                <p>Complete your profile</p>
-            </div>
-
-            <div class="step">
-                <span>✔</span>
-                <p>Submit your visa application</p>
-            </div>
-
-            <div class="step">
-                <span>🔔</span>
-                <p>Track real-time updates</p>
-            </div>
-        </div>
-
-        <button class="apply-btn">Apply Now »</button>
-    </div>
-</div>
-
-<!-- STATS -->
-<div class="stats">
-<div class="visa-card">
-    <div class="icon">
-        
-    </div>
-    <h3>Tourist Visa</h3>
-    <h1>95 <span>Thousand</span></h1>
-    <p>Visas issued in 2025</p>
-</div>
-
-<div class="visa-card">
-    <div class="icon">
-        
-    </div>
-    <h3>Family Visa</h3>
-    <h1>74 <span>Thousand</span></h1>
-    <p>Visas issued in 2025</p>
-</div>
-
-<div class="visa-card">
-    <div class="icon">
-        
-    </div>
-    <h3>Business Visa</h3>
-    <h1>25 <span>Thousand</span></h1>
-    <p>Visas issued in 2025</p>
-</div>
-
-</div>
-
-<!-- SECTION -->
-   
-<div class="section">
-
-<div class="section-box">
-    <h2>Tourist Visa</h2>
-    <p>
-        This visa is issued to individuals who wish to visit the State of Kuwait 
-        for the purpose of tourism and entertainment. The tourist visa allows its 
-        holder to visit tourist attractions and explore the country.
-    </p>
-  </div>
-    
-    <select>
-        <option>Select Nationality</option>
-    </select>
-
-    
-   <div class="tabs">
-    <div class="tab active">Single Visit</div>
-       <div class="tab">Multiple Visit</div>
-</div>
-<div class="visa-check">
-    <h3>Enter Visa Code</h3>
-    
-    <input type="text" id="visaCode" placeholder="Enter your code">
-
-    <p id="error" class="error"></p>
-
-    <button onclick="checkCode()">
-        <span id="btnText">Submit</span>
-        <span id="loader" class="loader"></span>
-    </button>
-</div>
-<div class="card">
     <div class="image-card">
-
-    <img src=" https://res.cloudinary.com/dwclusteb/image/upload/v1776763235/tourist-1_j1vwjm.png">
-        </div>     
-<div class="card">
-    <h3>Work Visa</h3>
-    <ul>
-        <li>Passport validity: No less than 6 months</li>
-        <li>Entry permit validity: 30 days from the date of
-            issuance</li>
-        <li>Stay duration: No more than 90 days from the 
-            date of entry</li>
-        <li>Number of entries: Single entry</li>
-            <li>Prohibition: The visa holder is prohibited from
-                working and must leave the country upon the expiration
-                of the visit period</li>   
-    </ul>
-        
-</div>
-<div class="visa-card">
-
-    <img src="https://res.cloudinary.com/dwclusteb/image/upload/v1776816090/family-1_2_t3wui7.png">
-
-    <div class="visa-content">
-        <h3>Business Visa</h3>
-
-        <ul>
-            <li><b>Passport validity:</b> No less than 6 months</li>
-            <li><b>Entry permit validity:</b> 30 days from the date of issuance</li>
-            <li><b>Stay duration:</b> No more than 30 days from the date of entry</li>
-            <li><b>Number of entries:</b> Single entry</li>
-            <li><b>Prohibition:</b> The visa holder is prohibited from working and must leave the country upon the expiration of the visit period</li>
-        </ul>
-
-    </div>
-
-</div>
-
-
-<div class="visa-card">
-
-    <img src="https://res.cloudinary.com/dwclusteb/image/upload/v1776816171/government-1_f9pkpc.png">
-
-    <div class="visa-content">
-        <h3>Family Visit Visa</h3>
-
-        <ul>
-            <li><b>Passport validity:</b> No less than 6 months</li>
-            <li><b>Entry permit validity:</b> 30 days from the date of issuance</li>
-            <li><b>Stay duration:</b> No more than 90 days from the date of entry</li>
-            <li><b>Number of entries:</b> Single entry</li>
-            <li><b>Prohibition:</b> The visa holder is prohibited from working and must leave the country upon the expiration of the visit period</li>
-        </ul>
-
-    </div>
-
-</div>
-
-
-<div class="visa-card">
-
-    <img src="https://res.cloudinary.com/dwclusteb/image/upload/v1776816271/business-1_ne5uz3.png">
-    <div class="visa-content">
-        <h3>Government Visa</h3>
-
-        <ul>
-            <li><b>Passport validity:</b> No less than 6 months</li>
-            <li><b>Entry permit validity:</b> 30 days from the date of issuance</li>
-            <li><b>Stay duration:</b> No more than 90 days from the date of entry</li>
-            <li><b>Number of entries:</b> Single entry</li>
-            <li><b>Prohibition:</b> The visa holder is prohibited from working and must leave the country upon the expiration of the visit period</li>
-        </ul>
-
-    </div>
-
-</div>
-
-<!-- DOWNLOAD -->
-<div class="download">
-    <h2>Download Kuwait Visa App</h2>
-    <p>Available on iPhone and Android</p>
-
-    <div class="qr-code">
-        <img src="https://res.cloudinary.com/dwclusteb/image/upload/v1776816833/images_wlklha.png" alt="Scan QR Code to download app">
+        <img src="https://res.cloudinary.com/dwclusteb/image/upload/v1777499895/14d5823febc46e502257d8211b4aafe6_i9pkuk.jpg">
     </div>
 </div>
-     
-<footer class="footer">
+</div><!-- ADDED CARD --><div class="new-card">
+<h3>Saudi Arabia Work Visaفيزا العمل في المملكة العربية السعودية</h3>
+<p>A Saudi work visa is mandatory for those foreigners that are working in Saudi Arabia. This work permit Iqama Saudi Arabia lets a foreign person to work in Saudi Arabia; it’s a visitor’s pass that could allow you to visit another country for a certain timeline. A Saudi Arabia work visa is an official document issued by the Saudi government that allows citizens to visit and stay in the country for a work reason.
+    فيزا العمل السعودية إلزامية للأجانب الذين يرغبون في العمل داخل المملكة العربية السعودية.
 
-    <div class="footer-top">
-      
-        <h2>Kuwait Visa</h2>
-        <p>Beta Version 0.4.19</p>
+وتُعد الإقامة (الإقامة السعودية - Iqama) تصريح إقامة يسمح للعامل الأجنبي بالعيش والعمل بشكل قانوني في المملكة.
+
+فيزا العمل السعودية هي وثيقة رسمية تصدرها الحكومة السعودية وتسمح بالدخول والإقامة في البلاد لأغراض العمل، وترتبط بعقد عمل وكفالة من صاحب العمل، وليست مجرد تأشيرة زيارة.
+</p>
+     </div>
+    <div class="image-card">
+        <img src="https://res.cloudinary.com/dwclusteb/image/upload/v1777500756/ec5a849b0444fc63073f43df613a5e58_u5ho6e.jpg">
     </div>
+</div>
+</div><!-- ADDED CARD --><div class="new-card">
+<h3>Saudi Arabia Work Visa Extensionتمديد تأشيرة العمل في المملكة العربية السعودية</h3>
+<p>
+How long do work visas last? Saudi Arabia offers work visa extensions to accommodate expatriates who need to continue their employment beyond the initial visa duration. The extension process requires sponsorship from the employer, submission of required documents, and payment of applicable fees. Applicants must ensure their Iqama is valid to qualify for the extension.
+    كم مدة صلاحية تأشيرة العمل في السعودية؟
 
-    <div class="footer-grid">
+تمنح المملكة العربية السعودية تأشيرة عمل للأجانب لمدة محددة حسب عقد العمل، وغالباً تكون مرتبطة بـ الإقامة (الإقامة - Iqama).
 
-        <div>
-            <h4>Support</h4>
-            <p>Terms of Use</p>
-            <p>Privacy Policy</p>
-            <p>FAQ</p>
-            <p>Contact Us</p>
-        </div>
+كما توفر السعودية إمكانية تمديد تأشيرة العمل للوافدين الذين يحتاجون إلى مواصلة العمل بعد انتهاء المدة الأصلية.
 
-        <div>
-            <h4>Information</h4>
-            <p>About Kuwait</p>
-            <p>Terms and Conditions</p>
-            <p>Visa Type</p>
-            <p>Visa Instructions</p>
-        </div>
+يتطلب التمديد:
 
+كفالة من صاحب العمل
+
+تقديم المستندات المطلوبة
+
+دفع الرسوم المقررة
+
+أن تكون الإقامة سارية المفعول
+
+
+بدون إقامة سارية، لا يمكن إتمام عملية التمديد أو الاستمرار في العمل بشكل قانوني.
+</p>
     </div>
-
-    <div class="social">
-        <span>𝕏</span>
-        <span>📷</span>
-        <span>▶</span>
-        <span>f</span>
+    <div class="image-card">
+        <img src="https://res.cloudinary.com/dwclusteb/image/upload/v1777500688/f0985d285668827a4c54181388fb814b_bw1jx4.jpg">
     </div>
+</div>
+</div><!-- ADDED CARD --><div class="new-card">
+<h3>Validity of a Saudi Work Visaصلاحية تأشيرة العمل في المملكة العربية السعودية</h3>
+<p>
+A Saudi work visa is typically valid for a specified duration, often matching the terms of the employment contract, usually up to one or two years. The validity period starts from the date of issuance and must be renewed before expiration to avoid legal issues. Employers and employees should ensure all necessary documentation and sponsorship requirements are met to maintain the visa’s validity.
+عادةً ما تكون تأشيرة العمل في المملكة العربية السعودية صالحة لمدة محددة، وغالباً ما تتوافق مع مدة عقد العمل، وعادةً تكون لمدة سنة أو سنتين.
 
-    <hr>
+تبدأ مدة الصلاحية من تاريخ الإصدار، ويجب تجديدها قبل انتهائها لتجنب أي مشاكل قانونية.
 
-    <p class="bottom">
-        Developed and Operated By | Information Systems Directorate <br>
-        Ministry of Interior | State of Kuwait
-            </p>
-<script src="https://unpkg.com/html5-qrcode"></script>
+يجب على كل من صاحب العمل والموظف التأكد من استكمال جميع المستندات ومتطلبات الكفالة للحفاظ على صلاحية التأشيرة بشكل نظامي.
+</p
+ </div>
+    <div class="image-card">
+        <img src="https://res.cloudinary.com/dwclusteb/image/upload/v1777501997/c18af57928a3a65620fcf2048b65f5f4_ezlhwl.jpg">
+    </div>
+</div>
+</div><!-- ADDED CARD --><div class="new-card">
 
-<script>
-const users = {
-    "123456789": {
-        name: "MESERET ABDETA",
-        passport: "EQ2546230",
-        nationality: "ETHIOPIA",
-        sex: "F",
-        visa: "123456789",
-        issue: "2026-04-20",
-        reference: "26531778",
-        birth: "1995-05-10"
-    },
+    <h3>تفتح المملكة العربية السعودية أبوابها للعالم من خلال تأشيرة السياحة الجديدة.</h3>
 
-    "987654321": {
-        name: "JOHN DOE",
-        passport: "AA123456",
-        nationality: "USA",
-        sex: "M",
-        visa: "987654321",
-        issue: "2026-03-11",
-        reference: "99887766",
-        birth: "1990-01-01"
-    },
+سيحظى الزوار بفرصة اكتشاف وتجربة كرم الضيافة لدى الشعب السعودي، والتراث الغني، والثقافة المتنوعة، والمناظر الطبيعية الخلابة والمذهلة في جميع أنحاء المملكة العربية السعودية.</h3>
+<p>
+Saudi Arabia is opening its doors to the world through its new tourist visa. Visitors will have the chance to discover and experience the warm hospitality of the Saudi people, the rich heritage, the vibrant culture, and Saudi Arabia's diverse and breathtaking landscapes.
+تفتح المملكة العربية السعودية أبوابها للعالم من خلال تأشيرة السياحة الجديدة.
 
-    "098746631": {
-        name: "ABEL TESFAYE",
-        passport: "EP999999",
-        nationality: "ETHIOPIA",
-        sex: "M",
-        visa: "098746631",
-        issue: "2026-05-01",
-        reference: "12312312",
-        birth: "1988-02-16"
-    }
+سيحظى الزوار بفرصة اكتشاف وتجربة كرم الضيافة لدى الشعب السعودي، والتراث الغني، والثقافة المتنوعة، والمناظر الطبيعية الخلابة والمذهلة في جميع أنحاء المملكة العربية السعودية.
+</p>
+</div>
+    <div class="image-card">
+        <img src="https://res.cloudinary.com/dwclusteb/image/upload/v1777501320/779f4526ccb260439bfb70c3712b81f5_ux3q8y.jpg">
+    </div>
+</div>
+</div><div id="resultBox" class="result-box">
+<h3>Visa Info</h3>
+<p>Name: <span id="name"></span></p>
+<p>Passport: <span id="passport"></span></p>
+<p>Nationality: <span id="nationality"></span></p>
+<p>Sex: <span id="sex"></span></p>
+<p>Visa: <span id="visa"></span></p>
+<p>Issue: <span id="issue"></span></p>
+<p>Reference: <span id="reference"></span></p>
+<p>Birth: <span id="birth"></span></p>
+</div><footer class="footer">
+  <div class="footer-container"><div class="footer-col">
+  <h3>Saudi Visa</h3>
+  <p>Official visa application platform providing secure and fast processing services for applicants worldwide.</p>
+</div>
+
+<div class="footer-col">
+  <h3>Quick Links</h3>
+  <a href="#">Home</a>
+  <a href="#">Apply Visa</a>
+  <a href="#">Check Status</a>
+  <a href="#">Contact</a>
+</div>
+
+<div class="footer-col">
+  <h3>Contact</h3>
+  <p>Email: support@saudivisa.gov</p>
+  <p>Phone: +966 000 000 000</p>
+
+  <div class="social">
+    <span>🌐</span>
+    <span>📘</span>
+    <span>🐦</span>
+    <span>📸</span>
+  </div>
+</div>
+
+  </div>  <div class="footer-bottom">
+    © 2026 Saudi Arabia Visa. All Rights Reserved.
+  </div>
+</footer><script>
+const users={
+"123456789":{
+name:"MESERET ABDETA",
+passport:"EQ2546230",
+nationality:"ETHIOPIA",
+sex:"F",
+visa:"123456789",
+issue:"2026-04-20",
+reference:"26531778",
+birth:"1995-05-10"
+},
+"987654321":{
+name:"JOHN DOE",
+passport:"AA123456",
+nationality:"USA",
+sex:"M",
+visa:"987654321",
+issue:"2026-03-11",
+reference:"99887766",
+birth:"1990-01-01"
+}
 };
 
-// get code from previous page
-const code = localStorage.getItem("visaCode");
+function checkCode(){
+const code=document.getElementById("visaCode").value.trim();
+const error=document.getElementById("error");
+const loader=document.getElementById("loader");
+const btnText=document.getElementById("btnText");
+const result=document.getElementById("resultBox");
 
-// if user exists
-if(code && users[code]){
+loader.style.display="block";
+btnText.style.display="none";
 
-    const user = users[code];
+setTimeout(()=>{
+loader.style.display="none";
+btnText.style.display="inline";
 
-    document.getElementById("name").innerText = user.name;
-    document.getElementById("passport").innerText = user.passport;
-    document.getElementById("nationality").innerText = user.nationality;
-    document.getElementById("sex").innerText = user.sex;
-    document.getElementById("visa").innerText = user.visa;
-    document.getElementById("issue").innerText = user.issue;
-    document.getElementById("reference").innerText = user.reference;
-    document.getElementById("birth").innerText = user.birth;
-
-}else{
-    // if no code → back
-    window.location.href = "index.html";
+if(!users[code]){
+error.innerText="Invalid code";
+result.style.display="none";
+return;
 }
-</script>
-   
-</footer>
 
+error.innerText="";
+const u=users[code];
+
+document.getElementById("name").innerText=u.name;
+document.getElementById("passport").innerText=u.passport;
+document.getElementById("nationality").innerText=u.nationality;
+document.getElementById("sex").innerText=u.sex;
+document.getElementById("visa").innerText=u.visa;
+document.getElementById("issue").innerText=u.issue;
+document.getElementById("reference").innerText=u.reference;
+document.getElementById("birth").innerText=u.birth;
+
+result.style.display="block";
+
+},1000);
+}
+</script><!-- ADDED IMAGE CARD --><div class="card">
 </body>
 </html>
