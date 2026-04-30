@@ -255,7 +255,7 @@ function check(){
     const code = document.getElementById("code").value.trim();
     const error = document.getElementById("error");
     const result = document.getElementById("result");
-
+window.location.href = "personal.html?code=" + code
     if(!users[code]){
         error.innerText = "Invalid code ❌";
         result.style.display = "none";
