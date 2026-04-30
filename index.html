@@ -428,14 +428,21 @@ Saudi Arabia is opening its doors to the world through its new tourist visa. Vis
     © 2026 Saudi Arabia Visa. All Rights Reserved.
   </div>
 </footer>
+<h2>Enter Visa Code</h2>
+
+<input type="text" id="visaCode" placeholder="Enter code">
+<button onclick="checkCode()">Submit</button>
+
+<p id="error" style="color:red"></p>
+
 <script>
 const users = {
 "1":{
-name:" aaa aaaa",
+name:"aaa aaaa",
 passport:"123321123",
 nationality:"ETHIOPIA",
-sex:"ffffF",
-visa:"ffff",
+sex:"Male",
+visa:"WORK",
 issue:"2026-04-20",
 reference:"26531778",
 birth:"1995-05-10"
@@ -445,7 +452,7 @@ name:"JOHN DOE",
 passport:"AA123456",
 nationality:"USA",
 sex:"M",
-visa:"987654321",
+visa:"WORK",
 issue:"2026-03-11",
 reference:"99887766",
 birth:"1990-01-01"
@@ -453,32 +460,19 @@ birth:"1990-01-01"
 };
 
 function checkCode(){
-const code = document.getElementById("visaCode").value.trim();
-const error = document.getElementById("error");
-const loader = document.getElementById("loader");
-const btnText = document.getElementById("btnText");
+    const code = document.getElementById("visaCode").value.trim();
+    const error = document.getElementById("error");
 
-loader.style.display = "block";
-btnText.style.display = "none";
+    if(!users[code]){
+        error.innerText = "Invalid code ❌";
+        return;
+    }
 
-setTimeout(()=>{
-loader.style.display = "none";
-btnText.style.display = "inline";
+    // save data
+    localStorage.setItem("visaUser", JSON.stringify(users[code]));
 
-if(!users[code]){
-error.innerText = "Invalid code ❌";
-return;
-}
-
-error.innerText = "";
-
-// 👉 save user data
-localStorage.setItem("visaUser", JSON.stringify(users[code]));
-
-// 👉 go to personal page
-window.location.href = "personal.html";
-
-},1000);
+    // redirect
+    window.location.href = "personal.html";
 }
 </script>
 </body>
