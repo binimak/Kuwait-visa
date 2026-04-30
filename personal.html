@@ -3,250 +3,147 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KSA VISA</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
+<title>Personal Information</title>
 
 <style>
-
 body{
     margin:0;
     background:#f2f2f2;
     font-family:Arial;
 }
 
-.visa{
-    width:880px;
-    margin:20px auto;
+.container{
+    max-width:600px;
+    margin:30px auto;
     background:#fff;
-    padding:20px 25px;
+    padding:25px;
+    border-radius:8px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
 
-/* HEADER */
-.header{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-}
-
-.logo{
-    color:#6a3fb5;
+.title{
+    text-align:center;
     font-size:22px;
+    color:#4b2c83;
+    margin-bottom:20px;
     font-weight:bold;
-}
-
-.country{
-    text-align:right;
-    font-family:'Cairo';
-    font-size:14px;
-}
-
-/* TOP AREA */
-.top{
-    display:flex;
-    margin-top:15px;
 }
 
 .photo{
-    width:140px;
-    height:160px;
+    width:120px;
+    height:140px;
     background:#ddd;
-}
-
-/* TABLE */
-.table{
-    width:100%;
-    margin-left:15px;
-    border-collapse:collapse;
+    margin:0 auto 20px;
 }
 
 .row{
-    display:grid;
-    grid-template-columns: 200px 1fr 200px;
-    align-items:center;
-    border-bottom:1px solid #cfcfcf;
-    height:36px;
+    display:flex;
+    justify-content:space-between;
+    border-bottom:1px solid #ddd;
+    padding:10px 0;
 }
 
-.left{
-    font-size:14px;
-    color:#555;
+.label{
+    color:#666;
 }
 
-.center{
-    text-align:center;
+.value{
     font-weight:bold;
+    color:#333;
+}
+
+.section{
+    margin-top:20px;
+}
+
+.section-title{
+    font-weight:bold;
+    margin-bottom:10px;
     color:#4b2c83;
 }
-
-.right{
-    text-align:right;
-    font-family:'Cairo';
-}
-
-/* PURPLE LINE (exact position) */
-.security{
-    margin:12px 0;
-    height:12px;
-    background: repeating-linear-gradient(
-        90deg,
-        #7e57c2 0px,
-        #7e57c2 8px,
-        transparent 8px,
-        transparent 16px
-    );
-}
-
-/* SECOND TABLE */
-.section{
-    margin-top:5px;
-}
-
-/* FOOTER */
-.footer{
-    text-align:center;
-    margin-top:25px;
-}
-
-.qr{
-    width:85px;
-    height:85px;
-    margin:10px auto;
-    background:#ccc;
-}
-
-.mrz{
-    font-family:monospace;
-    font-size:13px;
-    margin-top:10px;
-    letter-spacing:1px;
-}
-
 </style>
 </head>
 
 <body>
 
-<div class="visa">
+<div class="container">
 
-<!-- HEADER -->
-<div class="header">
-    <div class="logo">KSA VISA</div>
-
-    <div class="country">
-        <b>Kingdom of Saudi Arabia</b><br>
-        المملكة العربية السعودية
-    </div>
-</div>
-
-<!-- TOP -->
-<div class="top">
+<div class="title">Personal Information</div>
 
 <div class="photo"></div>
 
-<div style="flex:1; margin-left:15px;">
-
-<div class="row">
-<div class="left">Visa No.</div>
-<div class="center">6114753257</div>
-<div class="right">رقم التأشيرة</div>
-</div>
-
-<div class="row">
-<div class="left">Valid from</div>
-<div class="center">01/03/2024</div>
-<div class="right">صالحة اعتباراً من</div>
-</div>
-
-<div class="row">
-<div class="left">Valid until</div>
-<div class="center">30/05/2024</div>
-<div class="right">صالحة لغاية</div>
-</div>
-
-<div class="row">
-<div class="left">Duration of Stay</div>
-<div class="center">90 Days</div>
-<div class="right">مدة الإقامة</div>
-</div>
-
-</div>
-
-</div>
-
-<div class="security"></div>
-
-<!-- DETAILS -->
 <div class="section">
 
 <div class="row">
-<div class="left">Place of issue</div>
-<div class="center">Saudi Mission In Islamabad</div>
-<div class="right">مكان الإصدار</div>
+<div class="label">Full Name</div>
+<div class="value">MUHAMMAD IJAZ HUSSAIN</div>
 </div>
 
 <div class="row">
-<div class="left">Visa Type</div>
-<div class="center">Work - عمل</div>
-<div class="right">نوع التأشيرة</div>
+<div class="label">Nationality</div>
+<div class="value">Pakistan</div>
 </div>
 
 <div class="row">
-<div class="left">Name</div>
-<div class="center">MUHAMMAD IJAZ HUSSAIN</div>
-<div class="right">الاسم</div>
+<div class="label">Passport Number</div>
+<div class="value">GX1519282</div>
 </div>
 
 <div class="row">
-<div class="left">Nationality</div>
-<div class="center">Pakistan - باكستان</div>
-<div class="right">الجنسية</div>
+<div class="label">Occupation</div>
+<div class="value">Electronics Engineer</div>
+</div>
+
+</div>
+
+<div class="section">
+
+<div class="section-title">Visa Information</div>
+
+<div class="row">
+<div class="label">Visa Number</div>
+<div class="value">6114753257</div>
 </div>
 
 <div class="row">
-<div class="left">Passport No.</div>
-<div class="center">GX1519282</div>
-<div class="right">رقم الجواز</div>
+<div class="label">Visa Type</div>
+<div class="value">Work</div>
 </div>
 
 <div class="row">
-<div class="left">Ref. Date</div>
-<div class="center">01/03/2024</div>
-<div class="right">التاريخ</div>
+<div class="label">Valid From</div>
+<div class="value">01/03/2024</div>
 </div>
 
 <div class="row">
-<div class="left">Occupation</div>
-<div class="center">Electronics Engineer - مهندس إلكترونيات</div>
-<div class="right">المهنة</div>
+<div class="label">Valid Until</div>
+<div class="value">30/05/2024</div>
 </div>
 
 <div class="row">
-<div class="left">Employer name</div>
-<div class="center">Lover General Contracting</div>
-<div class="right">اسم صاحب العمل</div>
+<div class="label">Duration</div>
+<div class="value">90 Days</div>
+</div>
+
+</div>
+
+<div class="section">
+
+<div class="section-title">Employer Details</div>
+
+<div class="row">
+<div class="label">Company Name</div>
+<div class="value">Lover General Contracting</div>
 </div>
 
 <div class="row">
-<div class="left">Visa Fees</div>
-<div class="center">-</div>
-<div class="right">الرسوم</div>
+<div class="label">Place of Issue</div>
+<div class="value">Saudi Mission In Islamabad</div>
 </div>
 
-</div>
-
-<div class="security"></div>
-
-<!-- FOOTER -->
-<div class="footer">
-
-For Visa Inquiry
-
-<div class="qr"></div>
-
-<div class="mrz">
-1&lt;PAKALI&lt;&lt;MUHAMMAD&lt;IJAZ&lt;HUSSAIN&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;<br>
-GX15192829PAK0503199431301&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;06
+<div class="row">
+<div class="label">Reference Date</div>
+<div class="value">01/03/2024</div>
 </div>
 
 </div>
