@@ -1,17 +1,14 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Saudi Arabia Visa</title><style>
+<title>Saudi Arabia Visa</title>
+
+<style>
 :root{
     --primary:#1f6f8b;
-    --primary-dark:#155e75;
     --accent:#2aa7c9;
-    --text-dark:#1e3a4c;
-    --text-light:#5f7d8a;
-    --bg:#f3f7fa;
-    --card:#ffffff;
-    --border:#d9e6ee;
 }
 
 *{
@@ -23,16 +20,15 @@
 
 body{
     background:#f2f6f8;
-    padding:15px;
 }
 
+/* HEADER */
 .header{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:12px 16px;
-    border-radius:0 0 20px 20px;
-    background:linear-gradient(to right,#e6f3f7,#ffffff);
+    padding:15px;
+    background:white;
 }
 
 .left{
@@ -47,50 +43,23 @@ body{
 }
 
 .logo-text span{
-    display:block;
-    font-weight:600;
-    color:#1f6f8b;
+    font-weight:bold;
+    color:var(--primary);
 }
 
-.logo-text small{
-    color:#5f7d8a;
-    font-size:13px;
-}
-
-.right{
-    display:flex;
-    gap:10px;
-}
-
-.icon-circle{
-    width:36px;
-    height:36px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border:1px solid #cfe3ec;
-    background:white;
-}
-
+/* HERO */
 .hero{
     margin:15px;
-    border-radius:25px;
+    border-radius:20px;
     overflow:hidden;
     position:relative;
 }
 
 .hero img{
     width:100%;
-    height:300px;
+    height:260px;
     object-fit:cover;
-    filter:brightness(0.7);
-}
-
-.overlay{
-    position:absolute;
-    inset:0;
-    background:linear-gradient(to bottom,rgba(0,0,0,0.2),rgba(0,0,0,0.65));
+    filter:brightness(0.6);
 }
 
 .hero-content{
@@ -101,49 +70,19 @@ body{
     color:white;
 }
 
-.steps{
-    margin:15px 0;
-}
-
-.step{
-    display:flex;
-    gap:10px;
-    margin:6px 0;
-}
-
-.apply-btn{
-    padding:12px 25px;
-    border:none;
-    border-radius:30px;
-    background:linear-gradient(to right,#8aaea0,#5f6c72);
-    color:white;
-}
-
-/* NEW CARD ADDED SECTION */
+/* CARD */
 .new-card{
-    background:#ffffff;
+    background:white;
     margin:15px;
     padding:20px;
     border-radius:20px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.08);
-    border:1px solid #e3eef3;
 }
 
-.new-card h3{
-    color:#1f6f8b;
-    margin-bottom:10px;
-}
-
-.new-card p{
-    color:#5f7d8a;
-    line-height:1.5;
-}
-
+/* VISA CHECK */
 .visa-check{
-    max-width:350px;
-    margin:30px auto;
-    padding:20px;
     background:#d9edf2;
+    margin:15px;
+    padding:20px;
     border-radius:20px;
     text-align:center;
 }
@@ -151,19 +90,20 @@ body{
 .visa-check input{
     width:100%;
     padding:10px;
-    margin-bottom:10px;
+    margin-top:10px;
 }
 
 .visa-check button{
     width:100%;
     padding:10px;
+    margin-top:10px;
     background:#007B8A;
     color:white;
     border:none;
-    position:relative;
 }
 
-.result-box{
+/* RESULT */
+.result{
     display:none;
     background:white;
     margin:15px;
@@ -173,266 +113,118 @@ body{
 
 .error{
     color:red;
+    text-align:center;
 }
 
-.loader{
-    display:none;
-    width:18px;
-    height:18px;
-    border:3px solid white;
-    border-top:3px solid transparent;
-    border-radius:50%;
-    position:absolute;
-    right:10px;
-    top:50%;
-    transform:translateY(-50%);
-    animation:spin 1s linear infinite;
-}
-
-@keyframes spin{
-    100%{transform:translateY(-50%) rotate(360deg);}
-}
-
-.footer{
-    background:#f6f9fc;
-    padding:20px;
-    border-radius:20px;
-    margin-top:20px;
-}
-/* PROFESSIONAL FOOTER CSS */
-.footer{
-    background:#0f2d3a;
-    color:white;
-    margin-top:30px;
-    border-radius:20px 20px 0 0;
-    overflow:hidden;
-}
-
-.footer-container{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:space-between;
-    padding:25px;
-    gap:20px;
-}
-
-.footer-col{
-    flex:1;
-    min-width:200px;
-}
-
-.footer-col h3{
-    margin-bottom:10px;
-    color:#2aa7c9;
-}
-
-.footer-col a{
-    display:block;
-    color:#cfe3ec;
-    text-decoration:none;
-    margin:5px 0;
-}
-
-.footer-col a:hover{
-    color:white;
-}
-
-.social span{
-    display:inline-block;
-    margin-right:10px;
-    font-size:18px;
-    cursor:pointer;
-}
-
-.footer-bottom{
-    text-
-center;
-    padding:12px;
-    background:#0b2230;
-    font-size:13px;
-    color:#9fb8c4;
-}
-
-/* CENTER CARD FIX */
-.card{
-    margin:15px auto;
-    max-width:420px;
-    background:#fff;
-    border-radius:20px;
-    padding:15px;
-    display:flex;
-    justify-content:center;
-}
-
+/* IMAGE */
 .image-card img{
     width:100%;
     border-radius:15px;
+    margin:15px 0;
 }
 
+/* FOOTER */
+.footer{
+    background:#0f2d3a;
+    color:white;
+    padding:20px;
+    margin-top:20px;
+}
 </style>
 </head>
-    <body>
-        <header class="header">
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
 <div class="left">
 <img src="https://res.cloudinary.com/dwclusteb/image/upload/v1777503574/17be0853569c3e995c22d9ae6040ff28_znt38j.jpg" class="logo-img">
 <div class="logo-text">
 <span>Saudi Arabia Visa</span>
-<small>Visa</small>
 </div>
-</div><div class="right">
-<div class="icon-circle">🌐</div>
-<div class="icon-circle">ع</div>
-<div class="icon-circle">☾</div>
 </div>
-</header><div class="hero">
-<img src="https://res.cloudinary.com/dwclusteb/image/upload/v1777503699/8d694ec06bad05eb1f41846934d21bff_hizusd.jpg ">
-<div class="overlay"></div><div class="hero-content">
-<h2>Apply for your visaقدّم طلب التأشيرة</h2>
-<div class="steps">
-<div class="step">👤 Create accountإنشاء حساب</div>
-<div class="step">📄 Complete profileإكمال الملف الشخصي</div>
-<div class="step">✔ Submit إرسال</div>
-<div class="step">🔔 Track تتبع</div>
+<div>🌐 ☾</div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+<img src="https://res.cloudinary.com/dwclusteb/image/upload/v1777503699/8d694ec06bad05eb1f41846934d21bff_hizusd.jpg">
+<div class="hero-content">
+<h2>Apply for your visa</h2>
 </div>
-<button class="apply-btn">Apply Now</button>
-</div>
-</div><!-- ADDED CARD --><div class="new-card">
-<h3>Important Notice   ملاحظة مهمة</h3>
-<p>
- 
-
-يجب على جميع المتقدمين التأكد من أن جواز السفر صالح لمدة لا تقل عن 6 أشهر قبل التقديم. سيتم رفض الطلبات غير المكتملة تلقائياً.
-All applicants must ensure their passport is valid for at least 6 months before applying.
-Incomplete applications will be rejected automatically.
-</p>
-</div><div class="visa-check">
-<h3>Enter Visa Code    أدخل رمز التأشيرة</h3>
-<input type="text" id="visaCode" placeholder="Enter code">
-
-<button onclick="checkCode()">
-  Submit
-</button>
-    </div>
-    <div class="image-card">
-        <img src="https://res.cloudinary.com/dwclusteb/image/upload/v1777503711/14d5823febc46e502257d8211b4aafe6_etsyst.jpg ">
-    </div>
-</div>
-</div><!-- ADDED CARD --><div class="new-card">
-<h3>Saudi Arabia Work Visaفيزا العمل في المملكة العربية السعودية</h3>
-<p>A Saudi work visa is mandatory for those foreigners that are working in Saudi Arabia. This work permit Iqama Saudi Arabia lets a foreign person to work in Saudi Arabia; it’s a visitor’s pass that could allow you to visit another country for a certain timeline. A Saudi Arabia work visa is an official document issued by the Saudi government that allows citizens to visit and stay in the country for a work reason.
-    فيزا العمل السعودية إلزامية للأجانب الذين يرغبون في العمل داخل المملكة العربية السعودية.
-
-وتُعد الإقامة (الإقامة السعودية - Iqama) تصريح إقامة يسمح للعامل الأجنبي بالعيش والعمل بشكل قانوني في المملكة.
-
-فيزا العمل السعودية هي وثيقة رسمية تصدرها الحكومة السعودية وتسمح بالدخول والإقامة في البلاد لأغراض العمل، وترتبط بعقد عمل وكفالة من صاحب العمل، وليست مجرد تأشيرة زيارة.
-</p>
-     </div>
-    <div class="image-card">
-        <img src="https://res.cloudinary.com/dwclusteb/image/upload/v1777500756/ec5a849b0444fc63073f43df613a5e58_u5ho6e.jpg">
-    </div>
-</div>
-</div><!-- ADDED CARD --><div class="new-card">
-<h3>Saudi Arabia Work Visa Extensionتمديد تأشيرة العمل في المملكة العربية السعودية</h3>
-<p>
-How long do work visas last? Saudi Arabia offers work visa extensions to accommodate expatriates who need to continue their employment beyond the initial visa duration. The extension process requires sponsorship from the employer, submission of required documents, and payment of applicable fees. Applicants must ensure their Iqama is valid to qualify for the extension.
-    كم مدة صلاحية تأشيرة العمل في السعودية؟
-
-تمنح المملكة العربية السعودية تأشيرة عمل للأجانب لمدة محددة حسب عقد العمل، وغالباً تكون مرتبطة بـ الإقامة (الإقامة - Iqama).
-
-كما توفر السعودية إمكانية تمديد تأشيرة العمل للوافدين الذين يحتاجون إلى مواصلة العمل بعد انتهاء المدة الأصلية.
-
-يتطلب التمديد:
-
-كفالة من صاحب العمل
-
-تقديم المستندات المطلوبة
-
-دفع الرسوم المقررة
-
-أن تكون الإقامة سارية المفعول
-
-
-بدون إقامة سارية، لا يمكن إتمام عملية التمديد أو الاستمرار في العمل بشكل قانوني.
-</p>
-    </div>
-    <div class="image-card">
-        <img src="https://res.cloudinary.com/dwclusteb/image/upload/v1777503857/f0985d285668827a4c54181388fb814b_jci6nc.jpg ">
-    </div>
-</div>
-</div><!-- ADDED CARD --><div class="new-card">
-<h3>Validity of a Saudi Work Visaصلاحية تأشيرة العمل في المملكة العربية السعودية</h3>
-<p>
-A Saudi work visa is typically valid for a specified duration, often matching the terms of the employment contract, usually up to one or two years. The validity period starts from the date of issuance and must be renewed before expiration to avoid legal issues. Employers and employees should ensure all necessary documentation and sponsorship requirements are met to maintain the visa’s validity.
-عادةً ما تكون تأشيرة العمل في المملكة العربية السعودية صالحة لمدة محددة، وغالباً ما تتوافق مع مدة عقد العمل، وعادةً تكون لمدة سنة أو سنتين.
-
-تبدأ مدة الصلاحية من تاريخ الإصدار، ويجب تجديدها قبل انتهائها لتجنب أي مشاكل قانونية.
-
-يجب على كل من صاحب العمل والموظف التأكد من استكمال جميع المستندات ومتطلبات الكفالة للحفاظ على صلاحية التأشيرة بشكل نظامي.
-</p>
- </div>
-    <div class="image-card">
-        <img src="https://res.cloudinary.com/dwclusteb/image/upload/v1777501997/c18af57928a3a65620fcf2048b65f5f4_ezlhwl.jpg">
-    </div>
-</div>
-</div><!-- ADDED CARD --><div class="new-card">
-
-    <h3>تفتح المملكة العربية السعودية أبوابها للعالم من خلال تأشيرة السياحة الجديدة.</h3>
-
-سيحظى الزوار بفرصة اكتشاف وتجربة كرم الضيافة لدى الشعب السعودي، والتراث الغني، والثقافة المتنوعة، والمناظر الطبيعية الخلابة والمذهلة في جميع أنحاء المملكة العربية السعودية.</h3>
-<p>
-Saudi Arabia is opening its doors to the world through its new tourist visa. Visitors will have the chance to discover and experience the warm hospitality of the Saudi people, the rich heritage, the vibrant culture, and Saudi Arabia's diverse and breathtaking landscapes.
-تفتح المملكة العربية السعودية أبوابها للعالم من خلال تأشيرة السياحة الجديدة.
-
-سيحظى الزوار بفرصة اكتشاف وتجربة كرم الضيافة لدى الشعب السعودي، والتراث الغني، والثقافة المتنوعة، والمناظر الطبيعية الخلابة والمذهلة في جميع أنحاء المملكة العربية السعودية.
-</p>
-</div>
-    <div class="image-card">
-        <img src="https://res.cloudinary.com/dwclusteb/image/upload/v1777501320/779f4526ccb260439bfb70c3712b81f5_ux3q8y.jpg">
-    </div>
-        <div class="footer-col">
-  <h3>Quick Links</h3>
-  <a href="#">Home</a>
-  <a href="#">Apply Visa</a>
-  <a href="#">Check Status</a>
-  <a href="#">Contact</a>
 </div>
 
-<div class="footer-col">
-  <h3>Contact</h3>
-  <p>Email: support@saudivisa.gov</p>
-  <p>Phone: +966 000 000 000</p>
-
-  <div class="social">
-    <span>🌐</span>
-    <span>📘</span>
-    <span>🐦</span>
-    <span>📸</span>
-  </div>
+<!-- NOTICE -->
+<div class="new-card">
+<h3>Important Notice</h3>
+<p>Passport must be valid for at least 6 months. Incomplete applications will be rejected.</p>
 </div>
 
-  </div>  <div class="footer-bottom">
-    © 2026 Saudi Arabia Visa. All Rights Reserved.
-  </div>
-</footer>
-<div class="container">
-<h2>Saudi Visa Check</h2>
-
-<input type="text" id="code" placeholder="Enter Visa Code">
+<!-- VISA CHECK -->
+<div class="visa-check">
+<h3>Enter Visa Code</h3>
+<input type="text" id="code" placeholder="Enter code">
 <button onclick="check()">Check</button>
-
 <p id="error" class="error"></p>
-
-<div id="card" class="result">
-    <div class="row"><b>Name:</b> <span id="name"></span></div>
-    <div class="row"><b>Passport:</b> <span id="passport"></span></div>
-    <div class="row"><b>Nationality:</b> <span id="nationality"></span></div>
-    <div class="row"><b>Sex:</b> <span id="sex"></span></div>
-    <div class="row"><b>Visa:</b> <span id="visa"></span></div>
-    <div class="row"><b>Issue:</b> <span id="issue"></span></div>
-    <div class="row"><b>Reference:</b> <span id="reference"></span></div>
-    <div class="row"><b>Birth:</b> <span id="birth"></span></div>
 </div>
 
+<!-- RESULT -->
+<div id="result" class="result">
+<p><b>Name:</b> <span id="name"></span></p>
+<p><b>Passport:</b> <span id="passport"></span></p>
+<p><b>Nationality:</b> <span id="nationality"></span></p>
+<p><b>Sex:</b> <span id="sex"></span></p>
+<p><b>Visa:</b> <span id="visa"></span></p>
+<p><b>Issue:</b> <span id="issue"></span></p>
+<p><b>Reference:</b> <span id="reference"></span></p>
+<p><b>Birth:</b> <span id="birth"></span></p>
+</div>
+
+<!-- IMAGE -->
+<div class="image-card">
+<img src="https://res.cloudinary.com/dwclusteb/image/upload/v1777503711/14d5823febc46e502257d8211b4aafe6_etsyst.jpg">
+</div>
+
+<!-- INFO CARDS -->
+<div class="new-card">
+<h3>Saudi Work Visa</h3>
+<p>Work visa allows foreigners to work legally in Saudi Arabia.</p>
+</div>
+
+<div class="image-card">
+<img src="https://res.cloudinary.com/dwclusteb/image/upload/v1777500756/ec5a849b0444fc63073f43df613a5e58_u5ho6e.jpg">
+</div>
+
+<div class="new-card">
+<h3>Visa Extension</h3>
+<p>Visa can be extended with employer sponsorship.</p>
+</div>
+
+<div class="image-card">
+<img src="https://res.cloudinary.com/dwclusteb/image/upload/v1777503857/f0985d285668827a4c54181388fb814b_jci6nc.jpg">
+</div>
+
+<div class="new-card">
+<h3>Visa Validity</h3>
+<p>Usually 1–2 years depending on contract.</p>
+</div>
+
+<div class="image-card">
+<img src="https://res.cloudinary.com/dwclusteb/image/upload/v1777501997/c18af57928a3a65620fcf2048b65f5f4_ezlhwl.jpg">
+</div>
+
+<div class="new-card">
+<h3>Tourist Visa</h3>
+<p>Saudi Arabia is open for tourism worldwide.</p>
+</div>
+
+<div class="image-card">
+<img src="https://res.cloudinary.com/dwclusteb/image/upload/v1777501320/779f4526ccb260439bfb70c3712b81f5_ux3q8y.jpg">
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+<p>© 2026 Saudi Arabia Visa</p>
 </div>
 
 <script>
@@ -462,16 +254,16 @@ const users = {
 function check(){
     const code = document.getElementById("code").value.trim();
     const error = document.getElementById("error");
-    const card = document.getElementById("card");
+    const result = document.getElementById("result");
 
     if(!users[code]){
         error.innerText = "Invalid code ❌";
-        card.style.display = "none";
+        result.style.display = "none";
         return;
     }
 
     error.innerText = "";
-    card.style.display = "block";
+    result.style.display = "block";
 
     const d = users[code];
 
@@ -485,5 +277,6 @@ function check(){
     document.getElementById("birth").innerText = d.birth;
 }
 </script>
+
 </body>
 </html>
