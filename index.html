@@ -428,20 +428,40 @@ Saudi Arabia is opening its doors to the world through its new tourist visa. Vis
     © 2026 Saudi Arabia Visa. All Rights Reserved.
   </div>
 </footer>
-<h2>Enter Visa Code</h2>
+<div class="container">
 
-<input type="text" id="visaCode" placeholder="Enter code">
-<button onclick="checkCode()">Submit</button>
+<h2>Visa Code System</h2>
+
+<input id="code" placeholder="Enter code">
+<button onclick="loadVisa()">Load</button>
 
 <p id="error" style="color:red"></p>
+
+<!-- VISA CARD (this is what changes) -->
+<div class="card" id="visaCard" style="display:none">
+
+<h3>KSA VISA</h3>
+
+<div class="row"><b>Name</b><span id="name"></span></div>
+<div class="row"><b>Passport</b><span id="passport"></span></div>
+<div class="row"><b>Nationality</b><span id="nationality"></span></div>
+<div class="row"><b>Sex</b><span id="sex"></span></div>
+<div class="row"><b>Visa</b><span id="visa"></span></div>
+<div class="row"><b>Issue</b><span id="issue"></span></div>
+<div class="row"><b>Reference</b><span id="reference"></span></div>
+<div class="row"><b>Birth</b><span id="birth"></span></div>
+
+</div>
+
+</div>
 
 <script>
 const users = {
 "1":{
-name:"aaa aaaa",
+name:"AAA AAAAA",
 passport:"123321123",
 nationality:"ETHIOPIA",
-sex:"Male",
+sex:"M",
 visa:"WORK",
 issue:"2026-04-20",
 reference:"26531778",
@@ -459,21 +479,33 @@ birth:"1990-01-01"
 }
 };
 
-function checkCode(){
-    const code = document.getElementById("visaCode").value.trim();
-    const error = document.getElementById("error");
+function loadVisa(){
+const code = document.getElementById("code").value.trim();
+const error = document.getElementById("error");
 
-    if(!users[code]){
-        error.innerText = "Invalid code ❌";
-        return;
-    }
+if(!users[code]){
+error.innerText = "Invalid code ❌";
+document.getElementById("visaCard").style.display="none";
+return;
+}
 
-    // save data
-    localStorage.setItem("visaUser", JSON.stringify(users[code]));
+error.innerText="";
 
-    // redirect
-    window.location.href = "personal.html";
+const data = users[code];
+
+// 👉 LIVE UPDATE (NO PAGE CHANGE)
+document.getElementById("visaCard").style.display="block";
+
+document.getElementById("name").innerText = data.name;
+document.getElementById("passport").innerText = data.passport;
+document.getElementById("nationality").innerText = data.nationality;
+document.getElementById("sex").innerText = data.sex;
+document.getElementById("visa").innerText = data.visa;
+document.getElementById("issue").innerText = data.issue;
+document.getElementById("reference").innerText = data.reference;
+document.getElementById("birth").innerText = data.birth;
 }
 </script>
+
 </body>
 </html>
