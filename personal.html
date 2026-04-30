@@ -239,7 +239,7 @@ body{
 </style>
 </head>
 <body>
-<div class="card">
+<div class="page">
     <h2>Visa Information</h2>
 
     <div class="row"><span class="label">Name:</span> <span id="name"></span></div>
@@ -251,8 +251,6 @@ body{
     <div class="row"><span class="label">Reference:</span> <span id="reference"></span></div>
     <div class="row"><span class="label">Birth:</span> <span id="birth"></span></div>
 </div>
-<div class="page">
-
 <!-- HEADER -->
 <div class="header">
 
@@ -400,11 +398,12 @@ Please scan QR code
 GX15192829PAK0503199431301&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;06
 </div>
 
-</div>
 <script>
 const data = JSON.parse(localStorage.getItem("visaUser"));
 
-if(data){
+if(!data){
+    document.body.innerHTML = "<h2 style='color:red;text-align:center'>No Data Found</h2>";
+}else{
     document.getElementById("name").innerText = data.name;
     document.getElementById("passport").innerText = data.passport;
     document.getElementById("nationality").innerText = data.nationality;
@@ -413,9 +412,9 @@ if(data){
     document.getElementById("issue").innerText = data.issue;
     document.getElementById("reference").innerText = data.reference;
     document.getElementById("birth").innerText = data.birth;
-}else{
-    document.body.innerHTML = "<h3 style='text-align:center;color:red'>No data found</h3>";
 }
 </script>
+</div>
+
 </body>
 </html>
