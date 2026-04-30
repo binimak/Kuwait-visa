@@ -307,11 +307,10 @@ Incomplete applications will be rejected automatically.
 </p>
 </div><div class="visa-check">
 <h3>Enter Visa Code    أدخل رمز التأشيرة</h3>
-<input type="text" id="visaCode">
-<p id="error" class="error"></p>
+<input type="text" id="visaCode" placeholder="Enter code">
+
 <button onclick="checkCode()">
-<span id="btnText">Submit  إرسال</span>
-<span id="loader" class="loader"></span>
+  Submit
 </button>
     </div>
     <div class="image-card">
@@ -446,53 +445,53 @@ Saudi Arabia is opening its doors to the world through its new tourist visa. Vis
 </div>
   <script>
 const users = {
-"1":{
-name:"AAA AAAAA",
-passport:"123321123",
-nationality:"ETHIOPIA",
-sex:"M",
-visa:"WORK",
-issue:"2026-04-20",
-reference:"26531778",
-birth:"1995-05-10"
-},
-"987654321":{
-name:"JOHN DOE",
-passport:"AA123456",
-nationality:"USA",
-sex:"M",
-visa:"WORK",
-issue:"2026-03-11",
-reference:"99887766",
-birth:"1990-01-01"
-}
+  "1": {
+    name: "AAA AAAAA",
+    passport: "123321123",
+    nationality: "ETHIOPIA",
+    sex: "M",
+    visa: "WORK",
+    issue: "2026-04-20",
+    reference: "26531778",
+    birth: "1995-05-10"
+  },
+  "987654321": {
+    name: "JOHN DOE",
+    passport: "AA123456",
+    nationality: "USA",
+    sex: "M",
+    visa: "WORK",
+    issue: "2026-03-11",
+    reference: "99887766",
+    birth: "1990-01-01"
+  }
 };
 
-function loadVisa(){
-const code = document.getElementById("code").value.trim();
-const error = document.getElementById("error");
+function checkCode() {
+  const code = document.getElementById("visaCode").value.trim();
+  const error = document.getElementById("error");
+  const card = document.getElementById("visaCard");
 
-if(!users[code]){
-error.innerText = "Invalid code ❌";
-document.getElementById("visaCard").style.display="none";
-return;
+  if (!users[code]) {
+    error.innerText = "Invalid code ❌";
+    card.style.display = "none";
+    return;
+  }
+
+  error.innerText = "";
+  card.style.display = "block";
+
+  const data = users[code];
+
+  document.getElementById("v_name").innerText = data.name;
+  document.getElementById("v_passport").innerText = data.passport;
+  document.getElementById("v_nationality").innerText = data.nationality;
+  document.getElementById("v_sex").innerText = data.sex;
+  document.getElementById("v_visa").innerText = data.visa;
+  document.getElementById("v_issue").innerText = data.issue;
+  document.getElementById("v_reference").innerText = data.reference;
+  document.getElementById("v_birth").innerText = data.birth;
 }
-
-error.innerText="";
-
-const data = users[code];
-
-document.getElementById("visaCard").style.display="block";
-
-document.getElementById("v_name").innerText = data.name;
-document.getElementById("v_passport").innerText = data.passport;
-document.getElementById("v_nationality").innerText = data.nationality;
-document.getElementById("v_sex").innerText = data.sex;
-document.getElementById("v_visa").innerText = data.visa;
-document.getElementById("v_issue").innerText = data.issue;
-document.getElementById("v_reference").innerText = data.reference;
-document.getElementById("v_birth").innerText = data.birth;
-}
-</script>  
+</script>
 </body>
 </html>
