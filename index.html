@@ -389,24 +389,7 @@ Saudi Arabia is opening its doors to the world through its new tourist visa. Vis
     <div class="image-card">
         <img src="https://res.cloudinary.com/dwclusteb/image/upload/v1777501320/779f4526ccb260439bfb70c3712b81f5_ux3q8y.jpg">
     </div>
-</div>
-</div><div id="resultBox" class="result-box">
-<h3>Visa Info</h3>
-<p>Name: <span id="name"></span></p>
-<p>Passport: <span id="passport"></span></p>
-<p>Nationality: <span id="nationality"></span></p>
-<p>Sex: <span id="sex"></span></p>
-<p>Visa: <span id="visa"></span></p>
-<p>Issue: <span id="issue"></span></p>
-<p>Reference: <span id="reference"></span></p>
-<p>Birth: <span id="birth"></span></p>
-</div><footer class="footer">
-  <div class="footer-container"><div class="footer-col">
-  <h3>Saudi Visa</h3>
-  <p>Official visa application platform providing secure and fast processing services for applicants worldwide.</p>
-</div>
-
-<div class="footer-col">
+        <div class="footer-col">
   <h3>Quick Links</h3>
   <a href="#">Home</a>
   <a href="#">Apply Visa</a>
@@ -431,19 +414,28 @@ Saudi Arabia is opening its doors to the world through its new tourist visa. Vis
     © 2026 Saudi Arabia Visa. All Rights Reserved.
   </div>
 </footer>
-<h3>KSA VISA</h3>
+<div class="container">
+<h2>Saudi Visa Check</h2>
 
-<div class="row"><b>Name</b><span id="v_name"></span></div>
-<div class="row"><b>Passport</b><span id="v_passport"></span></div>
-<div class="row"><b>Nationality</b><span id="v_nationality"></span></div>
-<div class="row"><b>Sex</b><span id="v_sex"></span></div>
-<div class="row"><b>Visa</b><span id="v_visa"></span></div>
-<div class="row"><b>Issue</b><span id="v_issue"></span></div>
-<div class="row"><b>Reference</b><span id="v_reference"></span></div>
-<div class="row"><b>Birth</b><span id="v_birth"></span></div>
+<input type="text" id="code" placeholder="Enter Visa Code">
+<button onclick="check()">Check</button>
+
+<p id="error" class="error"></p>
+
+<div id="card" class="result">
+    <div class="row"><b>Name:</b> <span id="name"></span></div>
+    <div class="row"><b>Passport:</b> <span id="passport"></span></div>
+    <div class="row"><b>Nationality:</b> <span id="nationality"></span></div>
+    <div class="row"><b>Sex:</b> <span id="sex"></span></div>
+    <div class="row"><b>Visa:</b> <span id="visa"></span></div>
+    <div class="row"><b>Issue:</b> <span id="issue"></span></div>
+    <div class="row"><b>Reference:</b> <span id="reference"></span></div>
+    <div class="row"><b>Birth:</b> <span id="birth"></span></div>
+</div>
 
 </div>
-  <script>
+
+<script>
 const users = {
   "1": {
     name: "AAA AAAAA",
@@ -467,30 +459,30 @@ const users = {
   }
 };
 
-function checkCode() {
-  const code = document.getElementById("visaCode").value.trim();
-  const error = document.getElementById("error");
-  const card = document.getElementById("visaCard");
+function check(){
+    const code = document.getElementById("code").value.trim();
+    const error = document.getElementById("error");
+    const card = document.getElementById("card");
 
-  if (!users[code]) {
-    error.innerText = "Invalid code ❌";
-    card.style.display = "none";
-    return;
-  }
+    if(!users[code]){
+        error.innerText = "Invalid code ❌";
+        card.style.display = "none";
+        return;
+    }
 
-  error.innerText = "";
-  card.style.display = "block";
+    error.innerText = "";
+    card.style.display = "block";
 
-  const data = users[code];
+    const d = users[code];
 
-  document.getElementById("v_name").innerText = data.name;
-  document.getElementById("v_passport").innerText = data.passport;
-  document.getElementById("v_nationality").innerText = data.nationality;
-  document.getElementById("v_sex").innerText = data.sex;
-  document.getElementById("v_visa").innerText = data.visa;
-  document.getElementById("v_issue").innerText = data.issue;
-  document.getElementById("v_reference").innerText = data.reference;
-  document.getElementById("v_birth").innerText = data.birth;
+    document.getElementById("name").innerText = d.name;
+    document.getElementById("passport").innerText = d.passport;
+    document.getElementById("nationality").innerText = d.nationality;
+    document.getElementById("sex").innerText = d.sex;
+    document.getElementById("visa").innerText = d.visa;
+    document.getElementById("issue").innerText = d.issue;
+    document.getElementById("reference").innerText = d.reference;
+    document.getElementById("birth").innerText = d.birth;
 }
 </script>
 </body>
