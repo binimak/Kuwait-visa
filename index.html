@@ -245,7 +245,57 @@ body{
 }
 
 .footer-bottom{
-    text-align:center;
+    text-<script>
+const users = {
+"1":{
+name:"AAA AAAAA",
+passport:"123321123",
+nationality:"ETHIOPIA",
+sex:"M",
+visa:"WORK",
+issue:"2026-04-20",
+reference:"26531778",
+birth:"1995-05-10"
+},
+"987654321":{
+name:"JOHN DOE",
+passport:"AA123456",
+nationality:"USA",
+sex:"M",
+visa:"WORK",
+issue:"2026-03-11",
+reference:"99887766",
+birth:"1990-01-01"
+}
+};
+
+function loadVisa(){
+
+const code = document.getElementById("code").value.trim();
+const error = document.getElementById("error");
+
+if(!users[code]){
+error.innerText = "Invalid code ❌";
+document.getElementById("visaCard").style.display="none";
+return;
+}
+
+error.innerText="";
+
+const data = users[code];
+
+document.getElementById("visaCard").style.display="block";
+
+document.getElementById("v_name").innerText = data.name;
+document.getElementById("v_passport").innerText = data.passport;
+document.getElementById("v_nationality").innerText = data.nationality;
+document.getElementById("v_sex").innerText = data.sex;
+document.getElementById("v_visa").innerText = data.visa;
+document.getElementById("v_issue").innerText = data.issue;
+document.getElementById("v_reference").innerText = data.reference;
+document.getElementById("v_birth").innerText = data.birth;
+}
+</script>:center;
     padding:12px;
     background:#0b2230;
     font-size:13px;
@@ -429,15 +479,13 @@ Saudi Arabia is opening its doors to the world through its new tourist visa. Vis
   </div>
 </footer>
 <div class="visa-check">
-  <h3>Enter Visa Code أدخل رمز التأشيرة</h3>
+  <h3>Enter Visa Code</h3>
 
   <input type="text" id="code" placeholder="Enter code">
 
   <p id="error" class="error"></p>
 
-  <button onclick="loadVisa()">
-    Submit إرسال
-  </button>
+  <button onclick="loadVisa()">Submit</button>
 </div>
 <div class="card" id="visaCard" style="display:none">
 
@@ -453,11 +501,7 @@ Saudi Arabia is opening its doors to the world through its new tourist visa. Vis
 <div class="row"><b>Birth</b><span id="v_birth"></span></div>
 
 </div>
-
-
-</div>
-
-<script>
+  <script>
 const users = {
 "1":{
 name:"AAA AAAAA",
@@ -482,7 +526,6 @@ birth:"1990-01-01"
 };
 
 function loadVisa(){
-
 const code = document.getElementById("code").value.trim();
 const error = document.getElementById("error");
 
@@ -507,7 +550,6 @@ document.getElementById("v_issue").innerText = data.issue;
 document.getElementById("v_reference").innerText = data.reference;
 document.getElementById("v_birth").innerText = data.birth;
 }
-</script>
-
+</script>  
 </body>
 </html>
