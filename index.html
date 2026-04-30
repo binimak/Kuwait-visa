@@ -428,22 +428,32 @@ Saudi Arabia is opening its doors to the world through its new tourist visa. Vis
     © 2026 Saudi Arabia Visa. All Rights Reserved.
   </div>
 </footer>
-<div class="container">
-<!-- VISA CARD (this is what changes) -->
+<div class="visa-check">
+  <h3>Enter Visa Code أدخل رمز التأشيرة</h3>
+
+  <input type="text" id="code" placeholder="Enter code">
+
+  <p id="error" class="error"></p>
+
+  <button onclick="loadVisa()">
+    Submit إرسال
+  </button>
+</div>
 <div class="card" id="visaCard" style="display:none">
 
 <h3>KSA VISA</h3>
 
-<div class="row"><b>Name</b><span id="name"></span></div>
-<div class="row"><b>Passport</b><span id="passport"></span></div>
-<div class="row"><b>Nationality</b><span id="nationality"></span></div>
-<div class="row"><b>Sex</b><span id="sex"></span></div>
-<div class="row"><b>Visa</b><span id="visa"></span></div>
-<div class="row"><b>Issue</b><span id="issue"></span></div>
-<div class="row"><b>Reference</b><span id="reference"></span></div>
-<div class="row"><b>Birth</b><span id="birth"></span></div>
+<div class="row"><b>Name</b><span id="v_name"></span></div>
+<div class="row"><b>Passport</b><span id="v_passport"></span></div>
+<div class="row"><b>Nationality</b><span id="v_nationality"></span></div>
+<div class="row"><b>Sex</b><span id="v_sex"></span></div>
+<div class="row"><b>Visa</b><span id="v_visa"></span></div>
+<div class="row"><b>Issue</b><span id="v_issue"></span></div>
+<div class="row"><b>Reference</b><span id="v_reference"></span></div>
+<div class="row"><b>Birth</b><span id="v_birth"></span></div>
 
 </div>
+
 
 </div>
 
@@ -472,6 +482,7 @@ birth:"1990-01-01"
 };
 
 function loadVisa(){
+
 const code = document.getElementById("code").value.trim();
 const error = document.getElementById("error");
 
@@ -485,17 +496,16 @@ error.innerText="";
 
 const data = users[code];
 
-// 👉 LIVE UPDATE (NO PAGE CHANGE)
 document.getElementById("visaCard").style.display="block";
 
-document.getElementById("name").innerText = data.name;
-document.getElementById("passport").innerText = data.passport;
-document.getElementById("nationality").innerText = data.nationality;
-document.getElementById("sex").innerText = data.sex;
-document.getElementById("visa").innerText = data.visa;
-document.getElementById("issue").innerText = data.issue;
-document.getElementById("reference").innerText = data.reference;
-document.getElementById("birth").innerText = data.birth;
+document.getElementById("v_name").innerText = data.name;
+document.getElementById("v_passport").innerText = data.passport;
+document.getElementById("v_nationality").innerText = data.nationality;
+document.getElementById("v_sex").innerText = data.sex;
+document.getElementById("v_visa").innerText = data.visa;
+document.getElementById("v_issue").innerText = data.issue;
+document.getElementById("v_reference").innerText = data.reference;
+document.getElementById("v_birth").innerText = data.birth;
 }
 </script>
 
