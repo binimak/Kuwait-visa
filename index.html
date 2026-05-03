@@ -165,27 +165,30 @@ All applicants must ensure their passport is valid for at least 6 months
 </div>
 
 <!-- VISA CHECK -->
-<div class="visa-check">
-<h3>Enter Visa Codeأدخل رمز التأشيرة </h3>
-<input type="text" id="code" placeholder="Enter code">
+<h2>Visa Check | فحص التأشيرة</h2>
+
+<input type="text" id="code" placeholder="Enter Visa Code / أدخل الكود">
 <button onclick="check()">Check</button>
+
 <p id="error" class="error"></p>
-</div>
-<div class="header">
-<h3>Saudi Arabia Visa</h3>
-</div>
-<!-- RESULT -->
+
 <div id="result" class="result">
-<p><b>Name:</b> <span id="name"></span></p>
-<p><b>Passport:</b> <span id="passport"></span></p>
-<p><b>Nationality:</b> <span id="nationality"></span></p>
-<p><b>Sex:</b> <span id="sex"></span></p>
-<p><b>Visa:</b> <span id="visa"></span></p>
-<p><b>Issue:</b> <span id="issue"></span></p>
-<p><b>Reference:</b> <span id="reference"></span></p>
-<p><b>Birth:</b> <span id="birth"></span></p>
+
+<p><b>Name / الاسم:</b> <span id="name"></span></p>
+<p><b>Passport / جواز السفر:</b> <span id="passport"></span></p>
+<p><b>Nationality / الجنسية:</b> <span id="nationality"></span></p>
+<p><b>Gender / الجنس:</b> <span id="sex"></span></p>
+
+<p><b>Visa No / رقم التأشيرة:</b> <span id="visa"></span></p>
+<p><b>File No / رقم الملف:</b> <span id="file"></span></p>
+
+<p><b>Issue Date / تاريخ الإصدار:</b> <span id="issue"></span></p>
+<p><b>Reference / المرجع:</b> <span id="reference"></span></p>
+<p><b>Birth / الميلاد:</b> <span id="birth"></span></p>
+
 </div>
 
+</div>
 <!-- IMAGE -->
 <div class="image-card">
 <img src="">
@@ -264,58 +267,90 @@ All applicants must ensure their passport is valid for at least 6 months
 <div class="footer">
 <p>© 2026 Saudi Arabia Visa © 2026 تأشيرة المملكة العربية السعودية </p>
 </div>
-
 <script>
+
 const users = {
   "1": {
-    ar_name: "أحمد علي",
-    en_name: "AHMED ALI",
-    passport: "123321123",
-    nationality: "ETHIOPIA",
-    gender: "M",
-    job_ar: "سائق",
-    job_en: "Driver",
-    visa_no: "VISA-1001",
-    file_no: "FILE-7788",
-    salary: "140 KWD",
-    dob: "1995-05-10",
-    permit: "000026521"
+    name_en: "ASTER QAWATO LAGIDE",
+    name_ar: "أستر قاواتو لاجيدي",
+
+    passport: "EQ2584531",
+
+    nationality_en: "Ethiopian",
+    nationality_ar: "إثيوبي",
+
+    sex_en: "Female",
+    sex_ar: "أنثى",
+
+    visa: "000026591",
+    file: "KSA52125368213982",
+
+    issue: "2026-04-22",
+    reference: "REF7788",
+    birth: "1999-10-31"
   },
 
-  "987654321": {
-    ar_name: "جون دو",
-    en_name: "JOHN DOE",
-    passport: "AA123456",
-    nationality: "USA",
-    gender: "M",
-    job_ar: "عامل",
-    job_en: "Worker",
-    visa_no: "VISA-2002",
-    file_no: "FILE-9900",
-    salary: "160 KWD",
-    dob: "1990-01-01",
-    permit: "000099888"
+  "2": {
+    name_en: "ADEM SEYED YEMAM",
+    name_ar: "أدم سيد يمام",
+
+    passport: "EP7325058",
+
+    nationality_en: "Ethiopian",
+    nationality_ar: "إثيوبي",
+
+    sex_en: "Male",
+    sex_ar: "ذكر",
+
+    visa: "000026521",
+    file: "100229015",
+
+    issue: "2026-04-22",
+    reference: "REF5566",
+    birth: "1977-02-08"
   }
 };
 
 function check(){
+
     const code = document.getElementById("code").value.trim();
     const error = document.getElementById("error");
+    const result = document.getElementById("result");
 
     if(!users[code]){
-        error.innerText = "Invalid code ❌";
+        error.innerText = "Invalid Code ❌";
+        result.style.display = "none";
         return;
     }
 
+    const d = users[code];
+
     error.innerText = "";
+    result.style.display = "block";
 
-    // save user for personal page
-    localStorage.setItem("user", JSON.stringify(users[code]));
+    document.getElementById("name").innerText = d.name_en + " | " + d.name_ar;
+    document.getElementById("passport").innerText = d.passport;
 
-    // redirect to personal page
-    window.location.href = "personal.html";
+    document.getElementById("nationality").innerText =
+        d.nationality_en + " | " + d.nationality_ar;
+
+    document.getElementById("sex").innerText =
+        d.sex_en + " | " + d.sex_ar;
+
+    document.getElementById("visa").innerText = d.visa;
+    document.getElementById("file").innerText = d.file;
+    document.getElementById("issue").innerText = d.issue;
+    document.getElementById("reference").innerText = d.reference;
+    document.getElementById("birth").innerText = d.birth;
+
+    // go to personal page
+    setTimeout(()=>{
+        window.location.href = "personal.html?code=" + code;
+    },800);
 }
+
 </script>
+
 
 
 </body>
