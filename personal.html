@@ -1,350 +1,242 @@
-<!DOCTYPE html>  <html lang="en">  
-<head>  
-<meta charset="UTF-8">  
-<meta name="viewport" content="width=device-width,initial-scale=1.0">  
-<title>KSA Visa Exact Clone</title>  <style>  
-@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&family=Roboto+Mono:wght@400;700&display=swap');  
-  
-*{  
-    margin:0;  
-    padding:0;  
-    box-sizing:border-box;  
-}  
-  
-body{  
-    background:#dcdcdc;  
-    font-family:'Tajawal',sans-serif;  
-    padding:20px;  
-}  
-  
-/* PAGE */  
-.page{  
-    width:790px;  
-    height:1350px;  
-    margin:auto;  
-    background:#f8f8f8;  
-    position:relative;  
-    padding:42px 55px;  
-    overflow:hidden;  
-    color:#3b2a70;  
-}  
-  
-/* subtle watermark */  
-.page::before{  
-    content:"";  
-    position:absolute;  
-    inset:0;  
-    background:  
-    radial-gradient(circle at center,  
-    rgba(79,160,120,.06) 0 2%,  
-    transparent 2% 100%);  
-    background-size:180px 180px;  
-    opacity:.55;  
-}  
-  
-/* HEADER */  
-.header{  
-    position:relative;  
-    z-index:2;  
-    display:flex;  
-    justify-content:space-between;  
-    align-items:flex-start;  
-}  
-  
-.left-logo{  
-    color:#4d2d86;  
-    line-height:.82;  
-    font-weight:800;  
-}  
-  
-.left-logo .big{  
-    font-size:62px;  
-}  
-  
-.left-logo .mini{  
-    font-size:11px;  
-    margin-top:8px;  
-}  
-  
-.right-logo{  
-    text-align:right;  
-    color:#111;  
-}  
-  
-.right-logo .ar{  
-    font-size:36px;  
-    font-weight:800;  
-}  
-  
-.right-logo .en{  
-    font-size:15px;  
-    letter-spacing:2px;  
-    margin-top:3px;  
-}  
-  
-/* TOP SECTION */  
-.top{  
-    position:relative;  
-    z-index:2;  
-    margin-top:22px;  
-    display:grid;  
-    grid-template-columns:250px 1fr;  
-    gap:38px;  
-}  
-  
-.photo{  
-    width:240px;  
-    height:285px;  
-    background:#ddd;  
-    overflow:hidden;  
-}  
-  
-.photo img{  
-    width:100%;  
-    height:100%;  
-    object-fit:cover;  
-    filter:blur(2px);  
-}  
-  
-/* TABLE */  
-.table{  
-    width:105%;  
-}  
-  
-.row{  
-    display:grid;  
-    grid-template-columns:190px 1fr 190px;  
-    align-items:center;  
-    min-height:49px;  
-    border-bottom:2px solid #8e7ab8;  
-    font-size:18px;  
-}  
-  
-.left{  
-    color:#222;  
-}  
-  
-.center{  
-    text-align:center;  
-    font-weight:800;  
-    letter-spacing:.5px;  
-}  
-  
-.right{  
-    text-align:right;  
-    direction:rtl;  
-    color:#222;  
-}  
-  
-/* stamps */  
-.stamps{  
-    text-align:center;  
-    color:#8f6dc3;  
-    font-size:40px;  
-    letter-spacing:6px;  
-    margin:14px 0 8px;  
-    font-weight:700;  
-}  
-  
-/* LOWER TABLE */  
-.lower{  
-    position:relative;  
-    z-index:2;  
-    margin-top:10px;  
-}  
-  
-.lower .row{  
-    min-height:48px;  
-}  
-  
-/* fingerprint */  
-.fingerprint{  
-    position:absolute;  
-    left:90px;  
-    bottom:225px;  
-    font-size:64px;  
-    color:#2e9a70;  
-    z-index:2;  
-}  
-  
-/* bottom stamps */  
-.bottom-stamps{  
-    position:absolute;  
-    left:55px;  
-    right:55px;  
-    bottom:175px;  
-    text-align:center;  
-    color:#8f6dc3;  
-    font-size:45px;  
-    letter-spacing:6px;  
-    font-weight:70080;  
-    z-index:3;  
-}  
-  
-/* QR AREA */  
-.scan{  
-    position:absolute;  
-    left:0;  
-    right:0;  
-    bottom:96px;  
-    display:flex;  
-    justify-content:center;  
-    align-items:center;  
-    gap:18px;  
-    z-index:2;  
-}  
-  
-.scan-text{  
-    color:#111;  
-    font-size:13px;  
-    line-height:17px;  
-    font-weight:700;  
-    text-align:center;  
-}  
-  
-.qr{  
-    width:80px;  
-    height:80px;  
-    border:1px solid #2d9a70;  
-    background:  
-    repeating-linear-gradient(  
-    90deg,  
-    #000 0 4px,  
-    #fff 4px 8px  
-    ),  
-    repeating-linear-gradient(  
-    0deg,  
-    transparent 0 2px,  
-    rgba(0,0,0,.2) 4px 8px  
-    );  
-}  
-  
-/* MRZ */  
-.mrz{  
-    position:absolute;  
-    left:0;  
-    right:0;  
-    bottom:20px;  
-    text-align:center;  
-    color:#111;  
-    font-family:'Roboto Mono',monospace;  
-    font-size:30px;  
-    line-height:42px;  
-    letter-spacing:7px;  
-    z-index:2;  
-}  
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>Work Permit</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+@page { size:A4; margin:10mm; }
+
+body{
+    margin:0;
+    background:#eee;
+    font-family:'Cairo', sans-serif;
+}
+
+/* WATERMARK */
+body::before{
+    content:"";
+    position:fixed;
+    top:50%;
+    left:50%;
+    width:450px;
+    height:350px;
+    background:url('https://upload.wikimedia.org/wikipedia/commons/5/5c/Emblem_of_Kuwait.svg') no-repeat center;
+    background-size:contain;
+    opacity:0.06;
+    transform:translate(-50%,-50%);
+}
+
+/* PAGE */
+.page{
+    width:200mm;
+    min-height:257mm;
+    background:#fff;
+    margin:auto;
+    padding:10px;
+    box-shadow:0 0 15px rgba(0,0,0,0.15);
+    position:relative;
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:3px solid #000;
+    padding-bottom:10px;
+}
+
+.header img{width:180px;}
+
+.center{text-align:center;}
+.center h2{margin:0;font-size:18px;}
+.center h3{margin:0;font-size:14px;}
+
+.title{
+    font-size:30px;
+    font-weight:bold;
+    margin-top:20px;
+}
+
+.stamp{
+    position:absolute;
+    top:420px;
+    right:50px;
+    transform:rotate(-35deg);
+    border:1px solid #1faa00;
+    color:#1faa00;
+    padding:10px 25px;
+    font-size:110px;
+    font-weight:bold;
+    opacity:0.15;
+}
+
+/* BOX */
+.box{
+    border:1px solid #ccc;
+    margin-top:10px;
+    padding:20px;
+}
+
+.section{
+    font-weight:bold;
+    margin-bottom:10px;
+    border-bottom:1px solid #ccc;
+    padding-bottom:5px;
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+}
+
+.item{font-size:16px;}
+.label{font-weight:bold;}
+
+/* SIGN */
+.sign{
+    margin-top:20px;
+    display:flex;
+    justify-content:space-between;
+}
+
+.sign-box{
+    width:45%;
+    text-align:center;
+}
+
+.sign-line{
+    margin-top:60px;
+    border-top:2px solid #000;
+}
+
+/* FOOTER */
+.footer{
+    margin-top:20px;
+    display:flex;
+    justify-content:space-between;
+    font-size:16px;
+    border-top:2px solid #ccc;
+    padding-top:10px;
+}
 </style>
-</head>  
-<body>  
-    <div class="page">  <!-- HEADER -->
-        <div class="header">
-            <div class="left-logo">  
-<div class="big">KSA<br>VISA</div>  
-<div class="mini">تأشيرة سعودية</div>  
-</div> 
-        <div class="right-logo">  
-<div class="ar">المملكة العربية السعودية</div>  
-<div class="en">KINGDOM OF SAUDI ARABIA</div>  
-        </div>  
-    </div>  <!-- TOP -->  
-        <div class="top">  
-            <div class="photo">  
-<img src="photo.jpg" alt="photo">  
-</div>  
-            <div class="table"> 
-                <div class="row">  
-<div class="left">Visa No.</div>  
-<div class="center">6114753257</div>  
-<div class="right">رقم التأشيرة</div>  
-</div>  
-    <div class="row">  
-<div class="left">Valid from</div>  
-<div class="center">01/03/2024</div>  
-<div class="right">صالحة اعتباراً من</div>  
-</div>  
-    <div class="row">  
-<div class="left">Valid until</div>  
-<div class="center">30/05/2024</div>  
-<div class="right">صالحة لغاية</div>  
-</div>  
-    <div class="row">  
-<div class="left">Duration of Stay</div>  
-<div class="center">90 Days &nbsp;&nbsp;&nbsp; ٩٠ يوم</div>  
-<div class="right">مدة الإقامة</div>  
-</div>  
-    <div class="stamps">✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔</div>  
-                <div class="row">  
-<div class="left">Place of issue</div>  
-<div class="center">Saudi Mission In Islamabad</div>  
-<div class="right">مكان الإصدار</div>  
-    </div>  
-</div>  
-</div>  <!-- LOWER --> 
-        <div class="lower"> 
-            <div class="row">  
-<div class="left">Visa Type</div>  
-<div class="center">Work - عمل</div>  
-<div class="right">نوع التأشيرة</div>  
-</div>  
-            <div class="row">  
-<div class="left">Name</div>  
-<div class="center">MUHAMMAD IJAZ HUSSAIN</div>  
-<div class="right">الاسم</div>  
-</div>  
-            <div class="row">  
-<div class="left">Nationality</div>  
-<div class="center">Pakistan - باكستان</div>  
-<div class="right">الجنسية</div>  
-</div> 
-            <div class="row">  
-<div class="left">Passport No.</div>  
-<div class="center">GX1519282</div>  
-<div class="right">رقم الجواز</div>  
-</div>  
-            <div class="row">  
-<div class="left">Ref. No.</div>  
-<div class="center">188777999</div>  
-<div class="right">رقم المستند</div>  
-</div>  
-            <div class="row">  
-<div class="left">Ref. Date</div>  
-<div class="center">01/03/2024</div>  
-<div class="right">التاريخ</div>  
-</div>  
-            <div class="row">  
-<div class="left">Occupation</div>  
-<div class="center">Electronics Engineer - مهندس إلكترونيات</div>  
-<div class="right">المهنة</div>  
-</div>  
-            <div class="row">  
-<div class="left">Employer name</div>  
-<div class="center">مؤسسة لوفر للمقاولات العامة</div>  
-<div class="right">اسم صاحب العمل</div>  
-</div> 
-            <div class="row">  
-<div class="left">Visa Fees</div>  
-<div class="center">-</div>  
-<div class="right">الرسوم</div>  
-</div> 
-        </div>  
-        <div
-            class="fingerprint"></div> 
-        <div class="bottom-stamps">  
-✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔  
-</div>  <!-- QR -->  
-        <div class="scan"> 
-            <div class="scan-text">  
-For Visa Inquiry<br>  
-Please scan QR code  
-</div>  <div class="qr"></div>  <div class="scan-text">  
-للاستعلام عن التأشيرة<br>  
-يرجى مسح رمز الاستجابة السريعة  
-</div>  
-</div>  <!-- MRZ --> 
-        <div class="mrz">  
-1&lt;PAKALI&lt;&lt;MUHAMMAD&lt;IJAZ&lt;HUSSAIN&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;<br>  
-GX15192829PAK0503199431301&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;06  
-</div>  
-</div>  
-</body>  
-</html> 
+</head>
+
+<body>
+
+<div class="page">
+
+<div class="stamp">APPROVED</div>
+
+<!-- HEADER -->
+<div class="header">
+<img src="https://res.cloudinary.com/dwclusteb/image/upload/v1777819966/IMG_20260503_175039_119_s9n7zs.jpg">
+
+<div class="center">
+<h2>الهيئة العامة للقوى العاملة</h2>
+<h3>Public Authority of Manpower</h3>
+<div class="title">تصريح عمل | Work Permit</div>
+</div>
+
+<img src="https://res.cloudinary.com/dwclusteb/image/upload/v1777814511/03045f4107273242c125137dae9dac17_vcvvgn.jpg">
+</div>
+
+<!-- COMPANY -->
+<div class="box">
+<div class="grid">
+<div class="item"><span class="label">License No:</span> A0345-67 9 900001 1234 B</div>
+<div class="item"><span class="label">Unified No:</span> 557794</div>
+
+<div class="item"><span class="label">File No:</span> <span id="file_no"></span></div>
+<div class="item"><span class="label">Company:</span> شركة توصيل الطلبات</div>
+
+<div class="item"><span class="label">Address:</span> حولي - قطعة 9</div>
+<div class="item"><span class="label">Visa No:</span> <span id="visa_no"></span></div>
+</div>
+</div>
+
+<!-- WORKER -->
+<div class="box">
+<div class="section">Worker Information</div>
+
+<div class="grid">
+<div class="item"><span class="label">Name:</span> 
+<span id="ar_name"></span> | <span id="en_name"></span>
+</div>
+
+<div class="item"><span class="label">Nationality:</span> <span id="nationality"></span></div>
+<div class="item"><span class="label">DOB:</span> <span id="dob"></span></div>
+
+<div class="item"><span class="label">Passport:</span> <span id="passport"></span></div>
+<div class="item"><span class="label">Gender:</span> <span id="gender"></span></div>
+</div>
+</div>
+
+<!-- PERMIT -->
+<div class="box">
+<div class="section">Permit Details</div>
+
+<div class="grid">
+<div class="item"><span class="label">Job:</span> 
+<span id="job_ar"></span> | <span id="job_en"></span>
+</div>
+
+<div class="item"><span class="label">Permit No:</span> <span id="permit"></span></div>
+<div class="item"><span class="label">Issue Date:</span> 22/04/2026</div>
+
+<div class="item"><span class="label">Salary:</span> <span id="salary"></span></div>
+<div class="item"><span class="label">Expiry:</span> 22/04/2028</div>
+</div>
+</div>
+
+<!-- SIGN -->
+<div class="sign">
+<div class="sign-box">
+<div>Employee Signature</div>
+<div class="sign-line"></div>
+</div>
+
+<div class="sign-box">
+<div>Official Stamp</div>
+<div class="sign-line"></div>
+</div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+<div>22/04/2026</div>
+<div>Visa System</div>
+</div>
+
+</div>
+
+<script>
+let user = JSON.parse(localStorage.getItem("user"));
+
+window.onload = function(){
+  if(!user){
+    document.body.innerHTML = "No user found";
+    return;
+  }
+
+  document.getElementById("ar_name").innerText = user.ar_name;
+  document.getElementById("en_name").innerText = user.en_name;
+  document.getElementById("dob").innerText = user.dob;
+  document.getElementById("passport").innerText = user.passport;
+  document.getElementById("gender").innerText = user.gender;
+  document.getElementById("nationality").innerText = user.nationality;
+  document.getElementById("job_ar").innerText = user.job_ar;
+  document.getElementById("job_en").innerText = user.job_en;
+  document.getElementById("permit").innerText = user.permit;
+  document.getElementById("salary").innerText = user.salary;
+  document.getElementById("visa_no").innerText = user.visa_no;
+  document.getElementById("file_no").innerText = user.file_no;
+}
+</script>
+
+</body>
+</html>
