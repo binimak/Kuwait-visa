@@ -365,6 +365,34 @@ function checkCode(){
     msg.innerText = "❌ Invalid Code";
   }
 }
+
+window.onload = function(){
+
+  let user = JSON.parse(localStorage.getItem("user"));
+
+  if(!user){
+    document.body.innerHTML =
+    "<h2 style='text-align:center;color:red'>No Data Found ❌</h2>";
+    return;
+  }
+
+  // Fill data
+  document.getElementById("name").innerText =
+    user.name_en + " | " + user.name_ar;
+
+  document.getElementById("passport").innerText = user.passport;
+
+  document.getElementById("nationality").innerText =
+    user.nationality_en + " | " + user.nationality_ar;
+
+  document.getElementById("sex").innerText =
+    user.sex_en + " | " + user.sex_ar;
+
+  document.getElementById("birth").innerText = user.birth;
+
+  document.getElementById("photo").src = user.photo;
+};
+     
 </script>
 </body>
 </html>
