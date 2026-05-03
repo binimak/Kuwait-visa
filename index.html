@@ -353,20 +353,19 @@ const users = {
     photo: "https://i.imgur.com/8RKXAIV.png"
   }
 };
-
 function check(){
 
     const code = document.getElementById("code").value.trim();
-    const error = document.getElementById("error");
-    const result = document.getElementById("result");
 
     if(!users[code]){
-        error.innerText = "Invalid Code ❌";
-        result.style.display = "none";
+        document.getElementById("error").innerText = "Invalid Code ❌";
         return;
     }
 
-    const d = users[code];
+    // 👉 direct go to personal page
+    window.location.href = "personal.html?code=" + code;
+}
+
 
     error.innerText = "";
     result.style.display = "block";
