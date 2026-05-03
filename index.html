@@ -374,32 +374,6 @@ const users = {
   }
 };
 
-function check(){
-
-    const code = document.getElementById("code").value.trim();
-    const error = document.getElementById("error");
-
-    // clear error
-    error.innerText = "";
-
-    // empty input
-    if(code === ""){
-        error.innerText = "Please enter code ⚠️";
-        return;
-    }
-
-    // invalid
-    if(!users[code]){
-        error.innerText = "Invalid Code ❌";
-        return;
-    }
-
-    // ✅ valid → go to personal page
-    window.location.href = "personal.html?code=" + code;
-}
-
-
-</script>
 
 
 
