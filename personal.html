@@ -31,8 +31,8 @@ body::before{
 
 /* PAGE */
 .page{
-    width:200mm;
-    min-height:257mm;
+    width:210mm;
+    min-height:297mm;
     background:#fff;
     margin:auto;
     padding:10px;
@@ -40,37 +40,48 @@ body::before{
     position:relative;
 }
 
+/* TOP IMAGE */
+.top-banner img{
+    width:100%;
+    height:120px;
+    object-fit:cover;
+    border-bottom:3px solid #000;
+    margin-bottom:10px;
+}
+
+/* HEADER */
 .header{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    border-bottom:3px solid #000;
+    border-bottom:2px solid #000;
     padding-bottom:10px;
 }
 
-.header img{width:180px;}
+.header img{width:160px;}
 
 .center{text-align:center;}
 .center h2{margin:0;font-size:18px;}
-.center h3{margin:0;font-size:14px;}
+.center h3{margin:0;font-size:13px;}
 
 .title{
     font-size:30px;
     font-weight:bold;
-    margin-top:20px;
+    margin-top:10px;
 }
 
+/* STAMP */
 .stamp{
     position:absolute;
     top:420px;
-    right:50px;
+    right:40px;
     transform:rotate(-35deg);
-    border:1px solid #1faa00;
+    border:2px solid #1faa00;
     color:#1faa00;
     padding:10px 25px;
-    font-size:110px;
+    font-size:100px;
     font-weight:bold;
-    opacity:0.15;
+    opacity:0.2;
 }
 
 /* BOX */
@@ -84,10 +95,8 @@ body::before{
     font-weight:bold;
     margin-bottom:10px;
     border-bottom:1px solid #ccc;
-    padding-bottom:5px;
 }
 
-/* GRID */
 .grid{
     display:grid;
     grid-template-columns:repeat(2,1fr);
@@ -110,8 +119,8 @@ body::before{
 }
 
 .sign-line{
-    margin-top:60px;
-    border-top:2px solid #000;
+    margin-top:40px;
+    border-top:1px solid #000;
 }
 
 /* FOOTER */
@@ -119,7 +128,7 @@ body::before{
     margin-top:20px;
     display:flex;
     justify-content:space-between;
-    font-size:16px;
+    font-size:14px;
     border-top:2px solid #ccc;
     padding-top:10px;
 }
@@ -130,113 +139,91 @@ body::before{
 
 <div class="page">
 
+<!-- TOP IMAGE -->
+<div class="top-banner">
+<img src="https://res.cloudinary.com/dwclusteb/image/upload/v1777819966/IMG_20260503_175039_119_s9n7zs.jpg">
+</div>
+
 <div class="stamp">APPROVED</div>
 
 <!-- HEADER -->
 <div class="header">
-<img src="https://res.cloudinary.com/dwclusteb/image/upload/v1777819966/IMG_20260503_175039_119_s9n7zs.jpg">
+<img src="https://res.cloudinary.com/dwclusteb/image/upload/v1777814511/03045f4107273242c125137dae9dac17_vcvvgn.jpg">
 
 <div class="center">
-<h2>الهيئة العامة للقوى العاملة</h2>
-<h3>Public Authority of Manpower</h3>
+<h2>الهيئة العامة للقوى العاملة | Public Authority of Manpower</h2>
 <div class="title">تصريح عمل | Work Permit</div>
 </div>
 
-<img src="https://res.cloudinary.com/dwclusteb/image/upload/v1777814511/03045f4107273242c125137dae9dac17_vcvvgn.jpg">
+<img src="https://res.cloudinary.com/dwclusteb/image/upload/v1777819966/IMG_20260503_175039_119_s9n7zs.jpg">
 </div>
 
 <!-- COMPANY -->
 <div class="box">
 <div class="grid">
-<div class="item"><span class="label">License No:</span> A0345-67 9 900001 1234 B</div>
-<div class="item"><span class="label">Unified No:</span> 557794</div>
+<div class="item"><span class="label">License No / الرقم المدني:</span> A0345-67 9 900001 1234 B</div>
+<div class="item"><span class="label">Unified No / الرقم الموحد:</span> 557794</div>
 
-<div class="item"><span class="label">File No:</span> <span id="file_no"></span></div>
-<div class="item"><span class="label">Company:</span> شركة توصيل الطلبات</div>
+<div class="item"><span class="label">File No / رقم الملف:</span> KSA52125368213982</div>
+<div class="item"><span class="label">Visa No / رقم التأشيرة:</span> 000026591</div>
 
-<div class="item"><span class="label">Address:</span> حولي - قطعة 9</div>
-<div class="item"><span class="label">Visa No:</span> <span id="visa_no"></span></div>
+<div class="item"><span class="label">Company / اسم الملف:</span> شركة توصيل الطلبات الاستهلاكية</div>
+<div class="item"><span class="label">Address / العنوان:</span> حولي - قطعة 9 - شارع مسقط</div>
 </div>
 </div>
 
 <!-- WORKER -->
 <div class="box">
-<div class="section">Worker Information</div>
+<div class="section">Worker Information | بيانات العامل</div>
 
 <div class="grid">
-<div class="item"><span class="label">Name:</span> 
-<span id="ar_name"></span> | <span id="en_name"></span>
-</div>
+<div class="item"><span class="label">Name / الاسم:</span> ASTER QAWATO LAGIDE</div>
+<div class="item"><span class="label">Nationality / الجنسية:</span> Ethiopian</div>
 
-<div class="item"><span class="label">Nationality:</span> <span id="nationality"></span></div>
-<div class="item"><span class="label">DOB:</span> <span id="dob"></span></div>
+<div class="item"><span class="label">Date of Birth / تاريخ الميلاد:</span> 31/10/1999</div>
+<div class="item"><span class="label">Passport No / رقم الجواز:</span> EQ 2584531</div>
 
-<div class="item"><span class="label">Passport:</span> <span id="passport"></span></div>
-<div class="item"><span class="label">Gender:</span> <span id="gender"></span></div>
+<div class="item"><span class="label">Gender / الجنس:</span> Female</div>
+<div class="item"><span class="label">Expiry / الانتهاء:</span> 2028/04/22</div>
 </div>
 </div>
 
 <!-- PERMIT -->
 <div class="box">
-<div class="section">Permit Details</div>
+<div class="section">Permit Details | بيانات التصريح</div>
 
 <div class="grid">
-<div class="item"><span class="label">Job:</span> 
-<span id="job_ar"></span> | <span id="job_en"></span>
-</div>
+<div class="item"><span class="label">Job / المهنة:</span> Waiter</div>
+<div class="item"><span class="label">Permit No / رقم التصريح:</span> 000026591</div>
 
-<div class="item"><span class="label">Permit No:</span> <span id="permit"></span></div>
-<div class="item"><span class="label">Issue Date:</span> 22/04/2026</div>
+<div class="item"><span class="label">Issue Date / تاريخ الإصدار:</span> 22/04/2026</div>
+<div class="item"><span class="label">Salary / الراتب:</span> 140 KWD</div>
 
-<div class="item"><span class="label">Salary:</span> <span id="salary"></span></div>
-<div class="item"><span class="label">Expiry:</span> 22/04/2028</div>
+<div class="item"><span class="label">Salary Type / نوع الراتب:</span> Monthly</div>
+<div class="item"><span class="label">Expiry Date / تاريخ الانتهاء:</span> 22/04/2028</div>
 </div>
 </div>
 
 <!-- SIGN -->
 <div class="sign">
 <div class="sign-box">
-<div>Employee Signature</div>
+<div>Employee Signature | توقيع الموظف</div>
 <div class="sign-line"></div>
 </div>
 
 <div class="sign-box">
-<div>Official Stamp</div>
+<div>Official Stamp | الختم الرسمي</div>
 <div class="sign-line"></div>
 </div>
 </div>
 
 <!-- FOOTER -->
 <div class="footer">
-<div>22/04/2026</div>
-<div>Visa System</div>
+<div>Issue: 22/04/2026</div>
+<div>Visa No: 000026591</div>
 </div>
 
 </div>
-
-<script>
-let user = JSON.parse(localStorage.getItem("user"));
-
-window.onload = function(){
-  if(!user){
-    document.body.innerHTML = "No user found";
-    return;
-  }
-
-  document.getElementById("ar_name").innerText = user.ar_name;
-  document.getElementById("en_name").innerText = user.en_name;
-  document.getElementById("dob").innerText = user.dob;
-  document.getElementById("passport").innerText = user.passport;
-  document.getElementById("gender").innerText = user.gender;
-  document.getElementById("nationality").innerText = user.nationality;
-  document.getElementById("job_ar").innerText = user.job_ar;
-  document.getElementById("job_en").innerText = user.job_en;
-  document.getElementById("permit").innerText = user.permit;
-  document.getElementById("salary").innerText = user.salary;
-  document.getElementById("visa_no").innerText = user.visa_no;
-  document.getElementById("file_no").innerText = user.file_no;
-}
-</script>
 
 </body>
 </html>
