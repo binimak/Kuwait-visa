@@ -192,7 +192,9 @@ button{
 <h2>Apply for your visaقدّم طلب التأشيرة </h2>
 </div>
 </div>
-
+<div class="image-card">
+<img id="userPhoto" src="">
+</div>
 <!-- NOTICE -->
 <div class="new-card">
 <h3>Important Noticeملاحظة مهمة </h3>
@@ -327,6 +329,7 @@ const users = {
     issue: "2026-04-22",
     reference: "REF7788",
     birth: "1999-10-31"
+    photo: "https://res.cloudinary.com/dwclusteb/image/upload/v1777548954/IMG-20260413-WA0015_mmeejs.jpg"
   },
 
   "2": {
@@ -347,6 +350,7 @@ const users = {
     issue: "2026-04-22",
     reference: "REF5566",
     birth: "1977-02-08"
+    photo: "https://i.imgur.com/8RKXAIV.png"
   }
 };
 
@@ -367,6 +371,7 @@ function check(){
     error.innerText = "";
     result.style.display = "block";
 
+    document.getElementById("userPhoto").src = d.photo;
     document.getElementById("name").innerText = d.name_en + " | " + d.name_ar;
     document.getElementById("passport").innerText = d.passport;
 
