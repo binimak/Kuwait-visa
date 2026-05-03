@@ -309,6 +309,18 @@ All applicants must ensure their passport is valid for at least 6 months
 <p>© 2026 Saudi Arabia Visa © 2026 تأشيرة المملكة العربية السعودية </p>
 </div>
 <script>
+ <script>
+
+// =======================
+// FAQ TOGGLE (FIXED)
+// =======================
+document.querySelectorAll(".faq-btn").forEach(btn => {
+  btn.addEventListener("click", function () {
+    let content = this.nextElementSibling;
+    content.style.display =
+      content.style.display === "block" ? "none" : "block";
+  });
+});   
 const users = {
   "1": {
     name_en: "QAWATO LAGIDE",
