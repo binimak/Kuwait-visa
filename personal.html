@@ -173,7 +173,19 @@ body::before{
 
 <img src="https://res.cloudinary.com/dwclusteb/image/upload/v1777819966/IMG_20260503_175039_119_s9n7zs.jpg">
 </div>
+<span id="name"></span>
+<span id="passport"></span>
+<span id="nationality"></span>
+<span id="sex"></span>
+<span id="visa"></span>
+<span id="file"></span>
+<span id="issue"></span>
+<span id="reference"></span>
+<span id="birth"></span>
 
+<img id="photo">
+
+<span id="vcode"></span>
 <!-- COMPANY -->
 <div class="box">
 <div class="grid">
@@ -247,89 +259,42 @@ body::before{
 </div>
 
 </div>
-<script >
-// ================= TIME =================
-setInterval(()=>{
-  let now = new Date();
-  document.getElementById("time").innerText =
-  "Last system check: " + now.toLocaleString();
-},1000);
-
-
-// ================= PAGE LOAD =================
+    <script>
 window.onload = function(){
 
   let user = JSON.parse(localStorage.getItem("user"));
   let code = localStorage.getItem("vcode");
 
   if(!user){
-    alert("No Data Found!");
-    window.location.href = "index.html";
+    document.body.innerHTML = "<h2 style='color:red;text-align:center'>No Data Found ❌</h2>";
     return;
   }
 
-  // ================= TEXT =================
-  document.getElementById("name").innerText = user.name || "-";
-  document.getElementById("الاسم ").innerText = user.الاسم || "-";
-  document.getElementById("age").innerText = user.age || "-";
-  document.getElementById("dob").innerText = user. dob || "-";
-document.getElementById(" تاريخ الميلاد ").innerText = user. تاريخ الميلاد || "-";
-  document.getElementById("passport").innerText = user.passport || "-";
-    document.getElementById(" رقم الجواز ").innerText = user. رقم الجواز || "-";
-  document.getElementById("Gender").innerText = user.Gender || "-";
-  document.getElementById("الجنس ").innerText = user.الجنس || "-";
-  document.getElementById("Visa No").innerText = user.Visa No || "-";
-  document.getElementById("License No ").innerText = user.License No  || "-";
-document.getElementById("Unified No").innerText = user.Unified No || "-";
-  document.getElementById("File No").innerText = user.File No || "-";
+  // TEXT FILL
+  document.getElementById("name").innerText =
+    user.name_en + " | " + user.name_ar;
 
-  // ✅ FIXED CODE
-  document.getElementById("vcode").innerText = code || "-";
+  document.getElementById("passport").innerText = user.passport;
 
-  // ================= PHOTO =================
-  document.getElementById("photo").src =
-    user.photo || "https://via.placeholder.com/150";
+  document.getElementById("nationality").innerText =
+    user.nationality_en + " | " + user.nationality_ar;
 
-  // ================= DOCUMENT =================
-  let docImg = document.getElementById("doc");
+  document.getElementById("sex").innerText =
+    user.sex_en + " | " + user.sex_ar;
 
-  if(user.doc && user.doc !== ""){
-    docImg.src = user.doc;
-    docImg.style.display = "block";
-  }else{
-    docImg.style.display = "none";
-  }
+  document.getElementById("visa").innerText = user.visa;
+  document.getElementById("file").innerText = user.file;
+  document.getElementById("issue").innerText = user.issue;
+  document.getElementById("reference").innerText = user.reference;
+  document.getElementById("birth").innerText = user.birth;
 
-  // ================= QR CODE =================
-  let qr = document.getElementById("qr");
+  // PHOTO
+  document.getElementById("photo").src = user.photo;
 
-  let pageURL = window.location.href;
-
-
+  // CODE (optional)
+  let v = document.getElementById("vcode");
+  if(v) v.innerText = code || "-";
 };
-
-
-
-// ================= RECEIPT UPLOAD =================
-function uploadReceipt(){
-
-  let file = document.getElementById("receiptInput").files[0];
-
-  if(!file){
-    alert("Select receipt photo");
-    return;
-  }
-
-  let reader = new FileReader();
-
-  reader.onload = function(e){
-    localStorage.setItem("receipt", e.target.result);
-    alert("Receipt uploaded successfully");
-  }
-
-  reader.readAsDataURL(file);
-}
-
-</script>
+ </script>       
 </body>
 </html>
