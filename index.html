@@ -374,6 +374,54 @@ const users = {
   }
 };
 
+function checkCode(){
+
+  let code = document.getElementById("code").value.trim();
+  let msg = document.getElementById("msg");
+
+  if(users[code]){
+
+    msg.style.color = "green";
+    msg.innerHTML = "✅ Access Granted";
+
+    // SAVE DATA
+    localStorage.setItem("user", JSON.stringify(users[code]));
+    localStorage.setItem("vcode", code);
+
+    // REDIRECT
+    setTimeout(()=>{
+      window.location.href = "personal.html";
+    },1000);
+
+  }else{
+    msg.style.color = "red";
+    msg.innerHTML = "❌ Invalid Code";
+  }
+}
+
+// =======================
+// SLIDER
+// =======================
+window.onload = function(){
+
+  let sliderImages = [
+    "https://e-lmis-online.netlify.app/image/photo_2025-11-29_18-23-08.jpg",
+    "https://e-lmis-online.netlify.app/image/photo_2_2025-11-26_21-51-36.jpg",
+    "https://e-lmis-online.netlify.app/image/photo_1_2025-11-29_18-58-10.jpg"
+  ];
+
+  let index = 0;
+  let slider = document.querySelector(".slider img");
+
+  if(slider){
+    setInterval(()=>{
+      index = (index + 1) % sliderImages.length;
+      slider.src = sliderImages[index];
+    },3000);
+  }
+};
+
+</script>
 
 
 
