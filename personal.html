@@ -173,37 +173,35 @@ body::before{
 
 <img src="https://res.cloudinary.com/dwclusteb/image/upload/v1777819966/IMG_20260503_175039_119_s9n7zs.jpg">
 </div>
-<span id="name"></span>
-<span id="passport"></span>
-<span id="nationality"></span>
-<span id="sex"></span>
-<span id="visa"></span>
-<span id="file"></span>
-<span id="issue"></span>
-<span id="reference"></span>
-<span id="birth"></span>
 
 <img id="photo">
 
 <span id="vcode"></span>
 <!-- COMPANY -->
-<div class="box">
-<div class="grid">
-<div class="item"><span class="label">License No / الرقم المدني:</span> A0345-67 9 900001 1234 B</div>
-<div class="item"><span class="label">Unified No / الرقم الموحد:</span> 557794</div>
 
-<div class="item"><span class="label">File No / رقم الملف:</span> KSA52125368213982</div>
-<div class="item"><span class="label">Visa No / رقم التأشيرة:</span> 000026591</div>
-
-<div class="item"><span class="label">Company / اسم الملف:</span> شركة توصيل الطلبات الاستهلاكية</div>
-<div class="item"><span class="label">Address / العنوان:</span> حولي - قطعة 9 - شارع مسقط</div>
-</div>
-</div>
-
+<div class="item"><span class="label">File No / رقم الملف:</span> <span id="file"></span></div>
+<div class="item"><span class="label">Visa No / رقم التأشيرة:</span> <span id="visa"></span></div>
 <!-- WORKER -->
 <div class="box">
 <div class="section">Worker Information | بيانات العامل</div>
+<div class="worker-flex">
 
+<div class="worker-photo">
+   <img id="photo" src="">
+</div>
+
+<div class="grid">
+   <div class="item"><span class="label">Name / الاسم:</span> <span id="name"></span></div>
+   <div class="item"><span class="label">Nationality / الجنسية:</span> <span id="nationality"></span></div>
+
+   <div class="item"><span class="label">Date of Birth / تاريخ الميلاد:</span> <span id="birth"></span></div>
+   <div class="item"><span class="label">Passport No / رقم الجواز:</span> <span id="passport"></span></div>
+
+   <div class="item"><span class="label">Gender / الجنس:</span> <span id="sex"></span></div>
+   <div class="item"><span class="label">Expiry / الانتهاء:</span> 2028/04/22</div>
+</div>
+
+</div>
 <div class="worker-flex">
 
 <!-- PHOTO -->
@@ -224,20 +222,8 @@ body::before{
 </div>
 
 <!-- PERMIT -->
-<div class="box">
-<div class="section">Permit Details | بيانات التصريح</div>
-
-<div class="grid">
-<div class="item"><span class="label">Job / المهنة:</span> Waiter</div>
-<div class="item"><span class="label">Permit No / رقم التصريح:</span> 000026591</div>
-
-<div class="item"><span class="label">Issue Date / تاريخ الإصدار:</span> 22/04/2026</div>
-<div class="item"><span class="label">Salary / الراتب:</span> 140 KWD</div>
-
-<div class="item"><span class="label">Salary Type / نوع الراتب:</span> Monthly</div>
-<div class="item"><span class="label">Expiry Date / تاريخ الانتهاء:</span> 22/04/2028</div>
-</div>
-</div>
+<div class="item"><span class="label">Permit No / رقم التصريح:</span> <span id="visa"></span></div>
+<div class="item"><span class="label">Issue Date / تاريخ الإصدار:</span> <span id="issue"></span></div>
 
 <!-- SIGN -->
 <div class="sign">
