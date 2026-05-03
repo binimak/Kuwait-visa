@@ -310,9 +310,8 @@ All applicants must ensure their passport is valid for at least 6 months
 </div>
  <script>
 
-btn.forEach(function(b){
-  b.addEventListener("click", function(){
-  
+<button onclick="checkCode()">Check</button>
+<p id="msg"></p>
 
 let content=this.nextElementSibling;
 
@@ -329,18 +328,7 @@ content.style.display="block";
 </script>
 <script>
 
-// =======================
-// FAQ TOGGLE (FIXED)
-// =======================
-document.querySelectorAll(".faq-btn").forEach(btn => {
-  btn.addEventListener("click", function () {
-    let content = this.nextElementSibling;
-    content.style.display =
-      content.style.display === "block" ? "none" : "block";
-  });
-});
-    
-const users = {
+    const users = {
   "1": {
     name_en: "QAWATO LAGIDE",
     name_ar: "أستر قاواتو لاجيدي",
@@ -382,7 +370,7 @@ function checkCode(){
   if(users[code]){
 
     msg.style.color = "green";
-    msg.innerHTML = "✅ Access Granted";
+    msg.innerText = "✅ Access Granted";
 
     // SAVE DATA
     localStorage.setItem("user", JSON.stringify(users[code]));
@@ -395,35 +383,8 @@ function checkCode(){
 
   }else{
     msg.style.color = "red";
-    msg.innerHTML = "❌ Invalid Code";
+    msg.innerText = "❌ Invalid Code";
   }
 }
-
-// =======================
-// SLIDER
-// =======================
-window.onload = function(){
-
-  let sliderImages = [
-    "https://e-lmis-online.netlify.app/image/photo_2025-11-29_18-23-08.jpg",
-    "https://e-lmis-online.netlify.app/image/photo_2_2025-11-26_21-51-36.jpg",
-    "https://e-lmis-online.netlify.app/image/photo_1_2025-11-29_18-58-10.jpg"
-  ];
-
-  let index = 0;
-  let slider = document.querySelector(".slider img");
-
-  if(slider){
-    setInterval(()=>{
-      index = (index + 1) % sliderImages.length;
-      slider.src = sliderImages[index];
-    },3000);
-  }
-};
-
-</script>
-
-
-
 </body>
 </html>
