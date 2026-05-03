@@ -309,23 +309,17 @@ All applicants must ensure their passport is valid for at least 6 months
 <p>© 2026 Saudi Arabia Visa © 2026 تأشيرة المملكة العربية السعودية </p>
 </div>
 <script>
-
 const users = {
   "1": {
-    name_en: " QAWATO LAGIDE",
+    name_en: "QAWATO LAGIDE",
     name_ar: "أستر قاواتو لاجيدي",
-
     passport: "EQ2584531",
-
     nationality_en: "Ethiopian",
     nationality_ar: "إثيوبي",
-
     sex_en: "Female",
-    sex_ar: "إثيوبي ",
-
+    sex_ar: "أنثى",
     visa: "45454545",
     file: "5544554555",
-
     issue: "2026-04-22",
     reference: "REF7788",
     birth: "1999-10-31",
@@ -335,62 +329,44 @@ const users = {
   "2": {
     name_en: "ADEM SEYED YEMAM",
     name_ar: "أدم سيد يمام",
-
     passport: "EP7325058",
-
     nationality_en: "Ethiopian",
     nationality_ar: "إثيوبي",
-
     sex_en: "Male",
     sex_ar: "ذكر",
-
     visa: "000026521",
     file: "100229015",
-
     issue: "2026-04-22",
     reference: "REF5566",
     birth: "1977-02-08",
     photo: "https://i.imgur.com/8RKXAIV.png"
   }
 };
+
 function check(){
 
     const code = document.getElementById("code").value.trim();
+    const error = document.getElementById("error");
 
-    if(!users[code]){
-        document.getElementById("error").innerText = "Invalid Code ❌";
+    // clear error
+    error.innerText = "";
+
+    // empty input
+    if(code === ""){
+        error.innerText = "Please enter code ⚠️";
         return;
     }
 
-    // 👉 direct go to personal page
+    // invalid
+    if(!users[code]){
+        error.innerText = "Invalid Code ❌";
+        return;
+    }
+
+    // ✅ valid → go to personal page
     window.location.href = "personal.html?code=" + code;
 }
 
-
-    error.innerText = "";
-    result.style.display = "block";
-
-    document.getElementById("userPhoto").src = d.photo;
-    document.getElementById("name").innerText = d.name_en + " | " + d.name_ar;
-    document.getElementById("passport").innerText = d.passport;
-
-    document.getElementById("nationality").innerText =
-        d.nationality_en + " | " + d.nationality_ar;
-
-    document.getElementById("sex").innerText =
-        d.sex_en + " | " + d.sex_ar;
-
-    document.getElementById("visa").innerText = d.visa;
-    document.getElementById("file").innerText = d.file;
-    document.getElementById("issue").innerText = d.issue;
-    document.getElementById("reference").innerText = d.reference;
-    document.getElementById("birth").innerText = d.birth;
-
-    // go to personal page
-    setTimeout(()=>{
-        window.location.href = "personal.html?code=" + code;
-    },3000);
-}
 
 </script>
 
