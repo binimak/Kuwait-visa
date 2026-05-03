@@ -209,7 +209,8 @@ All applicants must ensure their passport is valid for at least 6 months
 <h2>Visa Check | فحص التأشيرة</h2>
 
 <input type="text" id="code" placeholder="Enter Visa Code / أدخل الكود">
-<button onclick="check()">Check</button>
+<button onclick="checkCode()">Check</button>
+<p id="msg"></p>
 
 <p id="error" class="error"></p>
 
@@ -308,7 +309,7 @@ All applicants must ensure their passport is valid for at least 6 months
 <div class="footer">
 <p>© 2026 Saudi Arabia Visa © 2026 تأشيرة المملكة العربية السعودية </p>
 </div>
- <script>
+    <script >
 const users = {
   "1": {
     name_en: "QAWATO LAGIDE",
@@ -343,6 +344,27 @@ const users = {
   }
 };
 
+function checkCode(){
+
+  let code = document.getElementById("code").value.trim();
+  let msg = document.getElementById("msg");
+
+  if(users[code]){
+
+    msg.style.color = "green";
+    msg.innerText = "✅ Access Granted";
+
+    localStorage.setItem("user", JSON.stringify(users[code]));
+
+    setTimeout(()=>{
+      window.location.href = "personal.html";
+    },1000);
+
+  }else{
+    msg.style.color = "red";
+    msg.innerText = "❌ Invalid Code";
+  }
+}
 function checkCode(){
 
   let code = document.getElementById("code").value.trim();
