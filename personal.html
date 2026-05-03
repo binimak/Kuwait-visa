@@ -247,6 +247,89 @@ body::before{
 </div>
 
 </div>
+<script >
+// ================= TIME =================
+setInterval(()=>{
+  let now = new Date();
+  document.getElementById("time").innerText =
+  "Last system check: " + now.toLocaleString();
+},1000);
 
+
+// ================= PAGE LOAD =================
+window.onload = function(){
+
+  let user = JSON.parse(localStorage.getItem("user"));
+  let code = localStorage.getItem("vcode");
+
+  if(!user){
+    alert("No Data Found!");
+    window.location.href = "index.html";
+    return;
+  }
+
+  // ================= TEXT =================
+  document.getElementById("name").innerText = user.name || "-";
+  document.getElementById("الاسم ").innerText = user.الاسم || "-";
+  document.getElementById("age").innerText = user.age || "-";
+  document.getElementById("dob").innerText = user. dob || "-";
+document.getElementById(" تاريخ الميلاد ").innerText = user. تاريخ الميلاد || "-";
+  document.getElementById("passport").innerText = user.passport || "-";
+    document.getElementById(" رقم الجواز ").innerText = user. رقم الجواز || "-";
+  document.getElementById("Gender").innerText = user.Gender || "-";
+  document.getElementById("الجنس ").innerText = user.الجنس || "-";
+  document.getElementById("Visa No").innerText = user.Visa No || "-";
+  document.getElementById("License No ").innerText = user.License No  || "-";
+document.getElementById("Unified No").innerText = user.Unified No || "-";
+  document.getElementById("File No").innerText = user.File No || "-";
+
+  // ✅ FIXED CODE
+  document.getElementById("vcode").innerText = code || "-";
+
+  // ================= PHOTO =================
+  document.getElementById("photo").src =
+    user.photo || "https://via.placeholder.com/150";
+
+  // ================= DOCUMENT =================
+  let docImg = document.getElementById("doc");
+
+  if(user.doc && user.doc !== ""){
+    docImg.src = user.doc;
+    docImg.style.display = "block";
+  }else{
+    docImg.style.display = "none";
+  }
+
+  // ================= QR CODE =================
+  let qr = document.getElementById("qr");
+
+  let pageURL = window.location.href;
+
+
+};
+
+
+
+// ================= RECEIPT UPLOAD =================
+function uploadReceipt(){
+
+  let file = document.getElementById("receiptInput").files[0];
+
+  if(!file){
+    alert("Select receipt photo");
+    return;
+  }
+
+  let reader = new FileReader();
+
+  reader.onload = function(e){
+    localStorage.setItem("receipt", e.target.result);
+    alert("Receipt uploaded successfully");
+  }
+
+  reader.readAsDataURL(file);
+}
+
+</script>
 </body>
 </html>
