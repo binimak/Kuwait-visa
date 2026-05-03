@@ -309,26 +309,7 @@ All applicants must ensure their passport is valid for at least 6 months
 <p>© 2026 Saudi Arabia Visa © 2026 تأشيرة المملكة العربية السعودية </p>
 </div>
  <script>
-
-<button onclick="checkCode()">Check</button>
-<p id="msg"></p>
-
-let content=this.nextElementSibling;
-
-if(content.style.display==="block"){
-content.style.display="none";
-}else{
-content.style.display="block";
-}
-
-});
-
-});
-
-
-
-
-    const users = {
+const users = {
   "1": {
     name_en: "QAWATO LAGIDE",
     name_ar: "أستر قاواتو لاجيدي",
@@ -374,9 +355,7 @@ function checkCode(){
 
     // SAVE DATA
     localStorage.setItem("user", JSON.stringify(users[code]));
-    localStorage.setItem("vcode", code);
 
-    // REDIRECT
     setTimeout(()=>{
       window.location.href = "personal.html";
     },1000);
@@ -386,5 +365,6 @@ function checkCode(){
     msg.innerText = "❌ Invalid Code";
   }
 }
+</script>
 </body>
 </html>
