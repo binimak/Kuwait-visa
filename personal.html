@@ -213,7 +213,7 @@ body::before{
 <div class="item"><span class="label">Job / المهنة:</span> <span id="job"></span></div>
 <div class="item"><span class="label">Issue Date / تاريخ الإصدار:</span> <span id="issue"></span></div>
 
-<div class="item"><span class="label">Permit No / رقم التصريح:</span> <span id="visa"></span></div>
+<div class="item"><span class="label">Permit Type / رقم التصريح:</span> <span id="permit type"></span></div>
 <div class="item"><span class="label">Salary / الراتب:</span> <span id="salary"></span></div>
 
 <div class="item"><span class="label">Expiry Date / تاريخ الانتهاء:</span> <span id="expiry"></span></div>
@@ -266,6 +266,7 @@ window.onload = function () {
   document.getElementById("job").innerText =
     user.job_en + " | " + user.job_ar;
 
+    document.getElementById("permit").innerText = user.permit;
   document.getElementById("license").innerText = user.license;
   document.getElementById("company").innerText = user.company;
   document.getElementById("visa").innerText = user.visa;
