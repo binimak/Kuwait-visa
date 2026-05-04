@@ -179,10 +179,10 @@ body::before{
 <span id="vcode"></span>
 <!-- COMPANY -->
 
-    <div class="item"><span class="Campany Name"/ اسم الملف :</span> <span id=" شركة توصيل الطلبات الاستهلاكية" ></span></div>
-    <div class="item"><span class="label">License No/ الرقم المدني للترخيص:</span> <span id="license"></span></div>
-<div class="item"><span class="label">File No / رقم الملف:</span> <span id="file"></span></div>
-<div class="item"><span class="label">Visa No / رقم التأشيرة:</span> <span id="visa"></span></div>
+    <div class="item"><span class="label">"Campany Name"/ اسم الملف :</span> <span id=" شركة توصيل الطلبات الاستهلاكية" ></span></div>
+    <div class="item"><span class="label">"License No"/ الرقم المدني للترخيص:</span> <span id="license"></span></div>
+<div class="item"><span class="label">"File No"/ رقم الملف:</span> <span id="file"></span></div>
+<div class="item"><span class="label">"Visa No"/ رقم التأشيرة:</span> <span id="visa"></span></div>
 <!-- WORKER -->
 <div class="box">
 <div class="section">Worker Information | بيانات العامل</div>
@@ -211,7 +211,7 @@ body::before{
     <div class="box">
 <div class="section">بيانات التصريح | Permit Details</div>
         <div class="grid">
-<div class="item"><span class="label">jop| نادلات:</span>"jop"</span> <span id="jop"></div>
+<div class="item"><span class="label">Jop| نادلات:</span> <span id="jop"></div>
     <div class="item"><span class="label">Issue Date|تاريخ الإصدار :</span> <span id="date"></div>
     <div class="item"><span class="label">Permit No / رقم التصريح:</span> <span id="visa"></span></div>
 <div class="item"><span class="label">Issue Date / تاريخ الإصدار:</span> <span id="issue"></span></div>
@@ -261,6 +261,11 @@ window.onload = function(){
   document.getElementById("sex").innerText =
     user.sex_en + " | " + user.sex_ar;
 
+    document.getElementById("jop").innerText = 
+        user.jop_en + " | " + user.jop_ar;
+    
+    document.getElementById("license").innerText = user.license;
+    document.getElementById(" شركة توصيل الطلبات الاستهلاكية ").innerText = user. شركة توصيل الطلبات الاستهلاكية;
   document.getElementById("visa").innerText = user.visa;
   document.getElementById("file").innerText = user.file;
   document.getElementById("issue").innerText = user.issue;
