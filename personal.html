@@ -174,9 +174,7 @@ body::before{
 <img src="https://res.cloudinary.com/dwclusteb/image/upload/v1777819966/IMG_20260503_175039_119_s9n7zs.jpg">
 </div>
 
-<img id="photo">
 
-<span id="vcode"></span>
 <!-- COMPANY -->
 <div class="item"><span class="label">Company Name / اسم الملف:</span> <span id="company"></span></div>
 <div class="item"><span class="label">License No / الرقم المدني:</span> <span id="license"></span></div>
@@ -243,34 +241,43 @@ body::before{
 </div>
 
 </div>
-    <script>
-window.onload = function(){
+<script>
+window.onload = function () {
 
   let user = JSON.parse(localStorage.getItem("user"));
   let code = localStorage.getItem("vcode");
 
-  if(!user){
+  if (!user) {
     document.body.innerHTML = "<h2 style='color:red;text-align:center'>No Data Found ❌</h2>";
     return;
   }
 
-  // TEXT FILL
-  document.getElementById("name").innerText = user.name_en + " | " + user.name_ar;
-document.getElementById("passport").innerText = user.passport;
-document.getElementById("nationality").innerText = user.nationality_en + " | " + user.nationality_ar;
-document.getElementById("sex").innerText = user.sex_en + " | " + user.sex_ar;
-document.getElementById("job").innerText = user.job_en + " | " + user.job_ar;
+  document.getElementById("name").innerText =
+    user.name_en + " | " + user.name_ar;
 
-document.getElementById("license").innerText = user.license;
-document.getElementById("company").innerText = user.company;
-document.getElementById("visa").innerText = user.visa;
-document.getElementById("file").innerText = user.file;
-document.getElementById("issue").innerText = user.issue;
-document.getElementById("birth").innerText = user.birth;
-document.getElementById("salary").innerText = user.salary;
-document.getElementById("expiry").innerText = user.expiry;
+  document.getElementById("passport").innerText = user.passport;
 
-document.getElementById("photo").src = user.photo;
- </script>       
+  document.getElementById("nationality").innerText =
+    user.nationality_en + " | " + user.nationality_ar;
+
+  document.getElementById("sex").innerText =
+    user.sex_en + " | " + user.sex_ar;
+
+  document.getElementById("job").innerText =
+    user.job_en + " | " + user.job_ar;
+
+  document.getElementById("license").innerText = user.license;
+  document.getElementById("company").innerText = user.company;
+  document.getElementById("visa").innerText = user.visa;
+  document.getElementById("file").innerText = user.file;
+  document.getElementById("issue").innerText = user.issue;
+  document.getElementById("birth").innerText = user.birth;
+  document.getElementById("salary").innerText = user.salary;
+  document.getElementById("expiry").innerText = user.expiry;
+
+  document.getElementById("photo").src = user.photo;
+
+};
+</script>
 </body>
 </html>
